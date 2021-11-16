@@ -13,7 +13,7 @@ Description of our project and its purpose
 |Jessie|[parkjessie](https://github.com/parkjessie)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Ajessie)|[Commits](https://github.com/B-G101/4Gs/commits?author=parkjessie)|
 ***
 ### Table of Contents
-1. [Week 0]()
+1. [Week 0](https://github.com/B-G101/4Gs#week-0-organize-and-design)
 
 
 ---
