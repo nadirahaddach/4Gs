@@ -1,9 +1,11 @@
-## [Team 4Gs](https://github.com/B-G101/4Gs)
+# [Team 4Gs](https://github.com/B-G101/4Gs)
+***
 Runtime link: to be added :)
 ### [Scrum Board](https://github.com/B-G101/4Gs/projects/1)
 ***
 ### Contributors
 |Contributor|Github ID/Profile|Assigned Tasks|Commits|Pair Journal|
+|------|----------|---------|--------|------------------|
 |Bria|
 |Nadira|
 |Paige|
