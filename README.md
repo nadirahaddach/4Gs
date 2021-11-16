@@ -1,15 +1,31 @@
 # [Team 4Gs](https://github.com/B-G101/4Gs)
-***
 Runtime link: to be added :)
 ### [Scrum Board](https://github.com/B-G101/4Gs/projects/1)
+### Project Purpose
+Description of our project and its purpose
 ***
 ### Contributors
 |Contributor|Github ID/Profile|Assigned Tasks|Commits|Pair Journal|
-|------|----------|---------|--------|------------------|
-|Bria|
-|Nadira|
-|Paige|
-|Jessie|
+|------|---------------------------|-----|--------|------------------|
+|Bria|[B-G101](https://github.com/B-G101)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Ab_g101)|[Commits](https://github.com/B-G101/4Gs/commits?author=B-G101)|
+|Nadira|[nadirahaddach](https://github.com/nadirahaddach)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Anadira)|[Commits](https://github.com/B-G101/4Gs/commits?author=nadirahaddach)|
+|Paige|[paigemccartin](https://github.com/paigemccartin)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Apaige)|[Commits](https://github.com/B-G101/4Gs/commits?author=paigemccartin)|
+|Jessie|[parkjessie](https://github.com/parkjessie)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Ajessie)|[Commits](https://github.com/B-G101/4Gs/commits?author=parkjessie)|
+***
+### Table of Contents
+1. [Week 0]()
+
+
+---
+## Week 0: Organize and Design
+|Assigned Role|Person Assigned|Tasks for the Week|Commits/Evidence of Completion|
+|--------------------------------------------------|----------------------------------------------|----------------------------------------|------------------------------------------------------------|
+|Scrum Master|Nadira|
+|GitHub Admin|Bria|
+|Primary Designer|Paige|
+|Deployment Manager|Jessie|
+|Operation Officer|Bria|
+
 
 
 
