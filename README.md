@@ -1,5 +1,19 @@
-## [Flask Portfolio Starter](https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter)
-Runtime link: https://portfolio.nighthawkcodingsociety.com/
+## [Team 4Gs](https://github.com/B-G101/4Gs)
+Runtime link: to be added :)
+### [Scrum Board](https://github.com/B-G101/4Gs/projects/1)
+***
+### Contributors
+|Contributor|Github ID/Profile|Assigned Tasks|Commits|Pair Journal|
+|Bria|
+|Nadira|
+|Paige|
+|Jessie|
+
+
+
+
+
+
 ### Idea
 Starter code should be fun and practical.
 ### Visual thoughts
