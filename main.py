@@ -31,21 +31,17 @@ def hawkers():
 def stub():
     return render_template("stub.html")
 
+@app.route('/nadira/')
+def nadira():
+    return render_template("aboutus/nadira.html")
 
 @app.route('/bria/')
 def bria():
     return render_template("aboutus/bria.html")
 
-
 @app.route('/jessie/')
 def jessie():
     return render_template("aboutus/jessie.html")
-
-
-@app.route('/nadira/')
-def nadira():
-    return render_template("aboutus/nadira.html")
-
 
 @app.route('/paige/')
 def paige():
