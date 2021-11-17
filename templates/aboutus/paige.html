@@ -5,6 +5,26 @@
     <title>Title</title>
 </head>
 <body>
+<div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: 'Arial Black', sans-serif;">
+
+    <!DOCTYPE html><div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: 'Arial Black', sans-serif;">
+    <div class="col-12">
+        <p   style="color:white">Nice to meet you, {{name2}}!</>
+    </div>
+    <div class="col-12">
+        <form action="/paigegreet/" id="paigegreet" method="POST" >
+            <label style="color:white"for="name">How are you doing today Mr./Mrs</label>
+            <input name="name" id="name">
+            <input type="submit" value="Welcome!">
+        </form>
+    </div>
+    <body style="background-color:mediumpurple;">
+</div>
+
+    <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vanta.halo.min.js') }}"></script>
+
+</div>
 
 </body>
 </html>
