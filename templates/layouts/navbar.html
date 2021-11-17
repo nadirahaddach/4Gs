@@ -9,12 +9,25 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-            <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
-            <a class="nav-link" href={{ url_for('kangaroos') }}>Kangaroos</a>
-            <a class="nav-link" href={{ url_for('walruses') }}>Walruses</a>
-            <a class="nav-link" href={{ url_for('hawkers') }}>Hawkers</a>
+            <a class="nav-link" href={{ url_for('index') }}>Home</a>
             <!-- stub is shown using the name of the route -->
-            <a class="nav-link" href="/stub">Stub</a>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href={{ url_for('aboutus') }} data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton2" type="button">
+                    Technicals!
+                    <!-- reformatted website with new drop down and switched game and index -->
+
+                </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <a class="dropdown-item" href={{ url_for('bria') }}>Bria</a>
+                <a class="dropdown-item" href={{ url_for('jessie') }}>Jessie</a>
+                <a class="dropdown-item" href={{ url_for('nadira') }}>Nadira</a>
+                <a class="dropdown-item" href={{ url_for('paige') }}>Paige</a>
+            </div>
+
+            </li>
+
         </div>
     </div>
 </nav>
+
