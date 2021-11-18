@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Page's page</title>
 </head>
 <body>
+<body>
+
+<h1 style="background-color:Violet;color:White;">Us Pages</h1>
+
+<p style="background-color:Grey;color:White;">
+    Hello I am Paige McCartin I am a junior at Del Norte High School
+</p>
+<td>
+    <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
+    <!-- Hack: create button (btn{{loop.index}} to  call java script function
+                               pass index to allow you to toggle images with hidden id's
+                               {image.base64}}  original image
+                               {image.base64_GRAY}}  gray scale image
+                            -->
+    <div>
+        <button type="button" id=myImage onclick="changeImage()">Color/Greyscale</button>
+    </div>
+
+    <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
+    <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
+</td>
+<a href="https://docs.google.com/document/d/1huWsfI7-3COuK45SiUF5_T3DFpNmcoGLhiiLbFigpsU/edit?usp=sharing">Visit Paige and Nadira's Journal</a>
+<a href="https://docs.google.com/document/d/1huWsfI7-3COuK45SiUF5_T3DFpNmcoGLhiiLbFigpsU/edit?usp=sharing">Visit Paige and Nadira's Journal</a>
+
+</body>
 
 </body>
 </html>
