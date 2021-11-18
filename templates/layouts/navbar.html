@@ -2,7 +2,7 @@
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
+    <a class="navbar-brand" href="#">New Student Page</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -13,21 +13,15 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <!-- stub is shown using the name of the route -->
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href={{ url_for('aboutus') }} data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton2" type="button">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Technicals!
                     <!-- reformatted website with new drop down and switched game and index -->
-
                 </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <a class="dropdown-item" href={{ url_for('bria') }}>Bria</a>
-                <a class="dropdown-item" href={{ url_for('jessie') }}>Jessie</a>
-                <a class="dropdown-item" href={{ url_for('nadira') }}>Nadira</a>
-                <a class="dropdown-item" href={{ url_for('paige') }}>Paige</a>
-            </div>
-
-            </li>
-
-        </div>
-    </div>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <a class="dropdown-item" href={{ url_for('bria') }}>Bria</a>
+                    <a class="dropdown-item" href={{ url_for('jessie') }}>Jessie</a>
+                    <a class="dropdown-item" href={{ url_for('nadira') }}>Nadira</a>
+                    <a class="dropdown-item" href={{ url_for('paige') }}>Paige</a>
+                </div>
 </nav>
 
