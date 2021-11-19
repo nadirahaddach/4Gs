@@ -1,2 +1,30 @@
 <!DOCTYPE html>
 {% extends "layouts/base.html" %}
+
+{% block body %}
+
+<style>
+
+    html, body{
+        background-color: #788585;
+    }
+    h1{
+        color: #B1B6A6;
+        animation-name: example;
+        animation-duration: 10s;
+    }
+    @keyframes example {
+        0%   {color:#B1B6A6; left:0px; top:0px;}
+        25%  {color:#9CAEA9; left:200px; top:0px;}
+        50%  {color:#819595; left:200px; top:200px;}
+        75%  {color:#696773; left:0px; top:200px;}
+        100% {color:#B1B6A6; left:0px; top:0px;}
+    }
+</style>
+    <body>
+
+<h1>Welcome to Bria's About me</h1>
+
+    </body>
+{% endblock %}
+
