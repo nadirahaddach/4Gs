@@ -1,35 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Page's page</title>
+    <title>CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px; /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300px; /* only for demonstration, should be removed */
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
 </head>
 <body>
-<body>
 
-<h1 style="background-color:Violet;color:White;">Us Pages</h1>
 
-<p style="background-color:Grey;color:White;">
-    Hello I am Paige McCartin I am a junior at Del Norte High School
-</p>
-<td>
-    <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
-    <!-- Hack: create button (btn{{loop.index}} to  call java script function
-                               pass index to allow you to toggle images with hidden id's
-                               {image.base64}}  original image
-                               {image.base64_GRAY}}  gray scale image
-                            -->
-    <div>
-        <button type="button" id=myImage onclick="changeImage()">Color/Greyscale</button>
-    </div>
+<header>
+    <h2>Paige McCartin</h2>
+</header>
 
-    <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
-    <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
-</td>
-<a href="https://docs.google.com/document/d/1huWsfI7-3COuK45SiUF5_T3DFpNmcoGLhiiLbFigpsU/edit?usp=sharing">Visit Paige and Nadira's Journal</a>
-<a href="https://docs.google.com/document/d/1huWsfI7-3COuK45SiUF5_T3DFpNmcoGLhiiLbFigpsU/edit?usp=sharing">Visit Paige and Nadira's Journal</a>
+<section>
+    <nav>
+        <ul>
+            <li><a href="https://docs.google.com/document/d/1huWsfI7-3COuK45SiUF5_T3DFpNmcoGLhiiLbFigpsU/edit?usp=sharing">Visit Paige and Nadira's Journal</a>
+                </a></li>
+        </ul>
+    </nav>
 
-</body>
+    <article>
+        <h1>About me</h1>
+        <p>Hello I am Paige McCartin I am a junior at Del Norte High School. I am on the varsity volleyball team at Del Norte and also involved in National Honors Society, Link Crew, and Gardening for change.</p>
+        <p>n/a</p>
+    </article>
+</section>
+
+<footer>
+    <p>Thanks for looking at my page!</p>
+</footer>
 
 </body>
 </html>
