@@ -13,4 +13,4 @@ def eightball(prediction):
     }
 
     response = requests.request("GET", url, headers=headers, params=querystring)
-    return response.text
+    return response.json().get('answer')

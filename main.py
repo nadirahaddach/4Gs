@@ -31,9 +31,11 @@ def hawkers():
 def stub():
     return render_template("stub.html")
 
+
 @app.route('/nadira/')
 def nadira():
     return render_template("aboutus/nadira.html")
+
 
 @app.route('/bria/', methods=['GET', 'POST'])
 def bria():
@@ -52,13 +54,16 @@ def eightballapi():
 
     return render_template("aboutus/briasapi.html", fact=search)
 
+
 @app.route('/jessie/')
 def jessie():
     return render_template("aboutus/jessie.html")
 
+
 @app.route('/paige/')
 def paige():
     return render_template("aboutus/paige.html")
+
 
 @app.route('/aboutus/')
 def aboutus():

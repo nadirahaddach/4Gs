@@ -8,18 +8,30 @@
     html, body{
         background-color: #788585;
     }
-
+    .center {
+        margin: auto;
+        width: 60%;
+        border: 5px solid #B1B6A6;
+        padding: 10px;
+    }
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
     </style>
 <body>
 
 
+<div class="center">
+    <h3>Test the Magic Eightball!</h3>
+    <form action="/briasapi/" id="eightballz" method="POST" >
+        <label for="eightballz">Search for a song</label>
+        <input name="eightballz" id="eightballz">
+        <input type="submit" value="Click to enter"> {{fact}}
+    </form>
+</div>
+<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bf4a25ae-702c-4a96-9dbf-2d17813f51ce/d6k9dcq-90c3bde3-3c65-4ab7-871a-1c0650386b76.png/v1/fill/w_1280,h_1280,strp/dlnorton_eightball_clipart_by_dlnorton_d6k9dcq-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2JmNGEyNWFlLTcwMmMtNGE5Ni05ZGJmLTJkMTc4MTNmNTFjZVwvZDZrOWRjcS05MGMzYmRlMy0zYzY1LTRhYjctODcxYS0xYzA2NTAzODZiNzYucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.n4hrdyYmlD4NFStMWaak9R7DfCMCD9OD0kZGpCESxfk" style="height: 500px; width: auto">
 
-<h3>Test the Magic Eightball!</h3>
-<form action="/briasapi/" id="eightballz" method="POST" >
-    <label for="eightballz">Search for a song</label>
-    <input name="eightballz" id="eightballz">
-    <input type="submit" value="Click to enter">
-    <br>{{fact}}
-</form>
 </body>
 {% endblock %}
