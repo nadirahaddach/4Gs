@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block body %}
+
+<style>
+
+    html, body{
+        background-color: #788585;
+    }
+
+    </style>
+<body>
+
+
+
+<h3>Test the Magic Eightball!</h3>
+<form action="/briasapi/" id="eightballz" method="POST" >
+    <label for="eightballz">Search for a song</label>
+    <input name="eightballz" id="eightballz">
+    <input type="submit" value="Click to enter">
+    <br>{{fact}}
+</form>
+</body>
+{% endblock %}
