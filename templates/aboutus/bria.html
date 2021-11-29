@@ -8,23 +8,55 @@
     html, body{
         background-color: #788585;
     }
-    h1{
+    h1 {
         color: #B1B6A6;
         animation-name: example;
         animation-duration: 10s;
+        position: relative;
+        animation-fill-mode: both;
+    }
+    h3 {
+        text-align: center;
     }
     @keyframes example {
-        0%   {color:#B1B6A6; left:0px; top:0px;}
-        25%  {color:#9CAEA9; left:200px; top:0px;}
-        50%  {color:#819595; left:200px; top:200px;}
-        75%  {color:#696773; left:0px; top:200px;}
-        100% {color:#B1B6A6; left:0px; top:0px;}
+        from   {color:#B1B6A6; left:0; top:0;}
+        20%  {color:#9CAEA9; left:200px; top:0;}
+        40%  {color:#819595; left:200px; top:200px;}
+        60%  {color:#696773; left:0; top:200px;}
+        80%  {color:#B1B6A6; left:0; top:0;}
+        to {color:#788585; left:200px; top:0; text-shadow: 1px 1px 2px #696773, 0 0 25px #B1B6A6, 0 0 5px #f1f1f1;}
+    }
+    img, input, a {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 </style>
     <body>
 
-<h1>Welcome to Bria's About me</h1>
+        <h1>Welcome to Bria's About me</h1>
+        <img src="/static/assets/briamaskon.jpg" id="briamaskon" alt="Bria Mask On" style="width: 400px; height: auto">
+        <input type="button" value="Take Mask Off" id="button1" onclick="changePhoto()">
+    <br>
+    <br>
+        <a class="button" target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vTPMuGiOHfJBdrBPX5YmiDXFeqBl-jDDcHnv0pB8RpevYS4wkS59LU-dF1g4am5PD4jhTMeK1J8PlEB/pub">Bria and Jessie Pair Journal!</a>
+        <br>
+        <br>
+        <h3>Test the Magic Eightball!</h3>
+        <a class="button" target="_blank" href="/briasapi/">Click Here</a>
 
     </body>
+    <script>
+    function changePhoto() {
+        if (document.getElementById("button1").value === "Take Mask Off") {
+            document.getElementById("briamaskon").src = "/static/assets/briamaskoff.jpg";
+            document.getElementById("button1").value = "Put Mask On";
+        }
+        else{
+            document.getElementById("briamaskon").src = "/static/assets/briamaskon.jpg";
+            document.getElementById("button1").value = "Take Mask Off";
+        }
+    }
+    </script>
 {% endblock %}
 
