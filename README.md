@@ -20,10 +20,10 @@ Description of our project and its purpose
 ## Week 0: Organize and Design
 |Assigned Role|Person Assigned|Tasks for the Week|Commits/Evidence of Completion|
 |--------------------------------------------------|----------------------------------------------|----------------------------------------|------------------------------------------------------------|
-|Scrum Master|Nadira|
-|GitHub Admin|Bria|
-|Primary Designer|Paige|
-|Deployment Manager|Jessie|
+|Scrum Master|Nadira|About Me Page, Scrum Board Policies
+|GitHub Admin|Bria|About Me Page, Github Policies
+|Primary Designer|Paige|About Me Page, Wireframes, Brainwrite
+|Deployment Manager|Jessie|About Me Page
 |Operation Officer|Bria|
 
 
