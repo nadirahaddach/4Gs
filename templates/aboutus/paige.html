@@ -1,100 +1,47 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-    <title>CSS Template</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        /* Style the header */
-        header {
-            background-color: #666;
-            padding: 30px;
-            text-align: center;
-            font-size: 35px;
-            color: white;
-        }
-
-        /* Create two columns/boxes that floats next to each other */
-        nav {
-            float: left;
-            width: 30%;
-            height: 300px; /* only for demonstration, should be removed */
-            background: #ccc;
-            padding: 20px;
-        }
-
-        /* Style the list inside the menu */
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        article {
-            float: left;
-            padding: 20px;
-            width: 70%;
-            background-color: #f1f1f1;
-            height: 300px; /* only for demonstration, should be removed */
-        }
-
-        /* Clear floats after the columns */
-        section::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Style the footer */
-        footer {
-            background-color: #777;
-            padding: 10px;
-            text-align: center;
-            color: white;
-        }
-
-        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-        @media (max-width: 600px) {
-            nav, article {
-                width: 100%;
-                height: auto;
-            }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
+{% block body %}
 <body>
-
-
-<header>
+<div class="center">
     <h2>Paige McCartin</h2>
-</header>
+    <p>Hi, my names Paige and I am the primary designer for our team. I play Varisty Girls Volleyball and participate in clubs such as Gardening for Change,
+        Link Crew, and NHS.</p>
+</div>
 
-<section>
-    <nav>
-        <ul>
-            <li><a href="https://docs.google.com/document/d/1huWsfI7-3COuK45SiUF5_T3DFpNmcoGLhiiLbFigpsU/edit?usp=sharing">Visit Paige and Nadira's Journal</a>
-                </a></li>
-        </ul>
-    </nav>
-
-    <article>
-        <h1>About me</h1>
-        <p>Hello I am Paige McCartin I am a junior at Del Norte High School. I am on the varsity volleyball team at Del Norte and also involved in National Honors Society, Link Crew, and Gardening for change.</p>
-        <p>n/a</p>
-    </article>
-</section>
-
-<footer>
-    <p>Thanks for looking at my page!</p>
-</footer>
 
 </body>
+<style>
+    table, td, th {
+        border: 1px solid whitesmoke;
+    }
+    table {
+        border-collapse: collapse;
+        width: 80%;
+    }
+    th {
+        height: 70px;
+    }
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    body {
+        background: pink;
+    }
+    body {
+        color: deeppink;
+    }
+</style>
+{% endblock %}
 </html>
