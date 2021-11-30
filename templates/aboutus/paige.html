@@ -15,7 +15,7 @@
 </div>
 
     <body>
-        <img src="/static/assets/briamaskon.jpg" id="briamaskon" alt=" Mask On" style="width: 400px; height: auto">
+        <img src="/static/assets/paigemaskon.jpg" id="briamaskon" alt=" Mask On" style="width: 400px; height: auto">
         <input type="button" value="Take Mask Off" id="button1" onclick="changePhoto()">
     <br>
     <br>
@@ -25,11 +25,11 @@
     <script>
     function changePhoto() {
         if (document.getElementById("button1").value === "Take Mask Off") {
-            document.getElementById("briamaskon").src = "/static/assets/briamaskoff.jpg";
+            document.getElementById("briamaskon").src = "/static/assets/paigemaskoff.jpg";
             document.getElementById("button1").value = "Put Mask On";
         }
         else{
-            document.getElementById("briamaskon").src = "/static/assets/briamaskon.jpg";
+            document.getElementById("briamaskon").src = "/static/assets/paigemaskon.jpg";
             document.getElementById("button1").value = "Take Mask Off";
         }
     }
