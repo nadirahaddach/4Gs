@@ -14,7 +14,26 @@
         Link Crew, and NHS.</p>
 </div>
 
+    <body>
+        <img src="/static/assets/briamaskon.jpg" id="briamaskon" alt=" Mask On" style="width: 400px; height: auto">
+        <input type="button" value="Take Mask Off" id="button1" onclick="changePhoto()">
+    <br>
+    <br>
+        <a class="button" target="_blank" href="https://docs.google.com/document/d/1huWsfI7-3COuK45SiUF5_T3DFpNmcoGLhiiLbFigpsU/edit">Paige and Nadira Pair Journal!</a>
 
+    </body>
+    <script>
+    function changePhoto() {
+        if (document.getElementById("button1").value === "Take Mask Off") {
+            document.getElementById("briamaskon").src = "/static/assets/briamaskoff.jpg";
+            document.getElementById("button1").value = "Put Mask On";
+        }
+        else{
+            document.getElementById("briamaskon").src = "/static/assets/briamaskon.jpg";
+            document.getElementById("button1").value = "Take Mask Off";
+        }
+    }
+    </script>
 </body>
 <style>
     table, td, th {
