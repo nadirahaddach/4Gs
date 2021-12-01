@@ -23,8 +23,8 @@ Description of our project and its purpose
 |Scrum Master|Nadira|About Me Page, Scrum Board Policies, Ideas for Technicals|1. [nadira.html](https://github.com/B-G101/4Gs/commit/c84310234ab4680d351c637ceba3c093760c3417)<br>|
 |GitHub Admin|Bria|About Me Page, Github Policies, Ideas for Technicals|1. [updated my about me page](https://github.com/B-G101/4Gs/commit/771906bbbe9135f14c2c058b99074c0bc5940f4a) <br>|
 |Primary Designer|Paige|About Me Page, Wireframes, Brainwrite, Ideas for Technicals|1. [paige 1](https://github.com/B-G101/4Gs/commit/f512f85071b4492632f3656a699a4c0a1705082b) <br> 2. [paiges page](https://github.com/B-G101/4Gs/commit/7885008e9fc7eda77ab185ec2bd7288512dc6536)<br>|
-|Deployment Manager|Jessie|About Me Page, Ideas for Technicals|1. [Brainstorming for 10-15 technical ideas](https://docs.google.com/drawings/d/1ltqMKRWSBqYHVMn_gVzjgOdaO25_D81y8Zk2adEhV7I/edit)|
-|Technical Officer|Bria|No tasks for the week|
+|Deployment Manager|Jessie|About Me Page, Ideas for Technicals||
+|Technical Officer|Bria|Ideas for Technicals| 1. [Brainstorming for 10-15 technical ideas](https://docs.google.com/drawings/d/1ltqMKRWSBqYHVMn_gVzjgOdaO25_D81y8Zk2adEhV7I/edit)|
 
 ---
 ## Week 0: Organize and Design
