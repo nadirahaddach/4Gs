@@ -22,9 +22,9 @@ Description of our project and its purpose
 |--------------------------------------------------|----------------------------------------------|----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 |Scrum Master|Nadira|About Me Page, Scrum Board Policies, Ideas for Technicals|1. [nadira.html](https://github.com/B-G101/4Gs/commit/c84310234ab4680d351c637ceba3c093760c3417)<br>|
 |GitHub Admin|Bria|About Me Page, Github Policies, Ideas for Technicals|1. [updated my about me page](https://github.com/B-G101/4Gs/commit/771906bbbe9135f14c2c058b99074c0bc5940f4a) <br>|
-|Primary Designer|Paige|About Me Page, Wireframes, Brainwrite, Ideas for Technicals|1. [Brainstorming for 10-15 technical ideas](https://docs.google.com/drawings/d/1ltqMKRWSBqYHVMn_gVzjgOdaO25_D81y8Zk2adEhV7I/edit) <br> 2. [paige 1](https://github.com/B-G101/4Gs/commit/f512f85071b4492632f3656a699a4c0a1705082b) <br> 3. [paiges page](https://github.com/B-G101/4Gs/commit/7885008e9fc7eda77ab185ec2bd7288512dc6536)<br>|
-|Deployment Manager|Jessie|About Me Page, Ideas for Technicals|
-|Operation Officer|Bria|No tasks for the week|
+|Primary Designer|Paige|About Me Page, Wireframes, Brainwrite, Ideas for Technicals|1. [paige 1](https://github.com/B-G101/4Gs/commit/f512f85071b4492632f3656a699a4c0a1705082b) <br> 2. [paiges page](https://github.com/B-G101/4Gs/commit/7885008e9fc7eda77ab185ec2bd7288512dc6536)<br>|
+|Deployment Manager|Jessie|About Me Page, Ideas for Technicals|1. [Brainstorming for 10-15 technical ideas](https://docs.google.com/drawings/d/1ltqMKRWSBqYHVMn_gVzjgOdaO25_D81y8Zk2adEhV7I/edit)|
+|Technical Officer|Bria|No tasks for the week|
 
 ---
 ## Week 0: Organize and Design
@@ -34,7 +34,7 @@ Description of our project and its purpose
 |GitHub Admin|Bria|About Me Page, Github Policies|1. [updated base and changed bria about me page](https://github.com/B-G101/4Gs/commit/c19a607c5768e718935180c85b1466530087e956) <br> 2. [change formatting of static a little bit, added api to my page, added the mask on mask off feature](https://github.com/B-G101/4Gs/commit/aee3e344a21f4b6175209e1fda5c3145515b530b) <br> 3. [finished api and fixed formatting on my about me page](https://github.com/B-G101/4Gs/commit/4372ef7a40f79034b8f86172ead53e2da4ba6988) <br> 4. [GitHub Policies and Contributing Guidelines](https://github.com/B-G101/4Gs/wiki/GitHub-Policies-and-Contributing-Guidelines)<br>|
 |Primary Designer|Paige|About Me Page, Wireframes, Brainwrite|1. [paige](https://github.com/B-G101/4Gs/commit/8bce3366b5d2fde7a8f546cbdd384213cc26be00)<br> 2. [paige](https://github.com/B-G101/4Gs/commit/a0dbf716936f53b5b5d9005b652461c9921d744f)<br> 3. [2.0 paige](https://github.com/B-G101/4Gs/commit/d7e0d72d90182cfc7e43bc76c154b6660d227b48)<br> 4. [Brainwrite](https://docs.google.com/drawings/d/1ltqMKRWSBqYHVMn_gVzjgOdaO25_D81y8Zk2adEhV7I/edit) <br> 5. [Wireframes](https://docs.google.com/presentation/d/1HYEDRN5f7PYX6Mmf6sWR_N41fWu1qG4b9oOvJjNwqx4/edit?usp=sharing)<br>|
 |Deployment Manager|Jessie|About Me Page|[]()|
-|Operation Officer|Bria|No tasks for the week|
+|Technical Officer|Bria|No tasks for the week|
 
 
 
