@@ -6,11 +6,11 @@ Description of our project and its purpose
 ***
 ### Contributors
 |Contributor|Github ID/Profile|Assigned Tasks|Commits|Pair Journal|
-|------|---------------------------|-----|--------|------------------|
-|Bria|[B-G101](https://github.com/B-G101)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Ab_g101)|[Commits](https://github.com/B-G101/4Gs/commits?author=B-G101)|
-|Nadira|[nadirahaddach](https://github.com/nadirahaddach)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Anadira)|[Commits](https://github.com/B-G101/4Gs/commits?author=nadirahaddach)|
-|Paige|[paigemccartin](https://github.com/paigemccartin)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Apaige)|[Commits](https://github.com/B-G101/4Gs/commits?author=paigemccartin)|
-|Jessie|[parkjessie](https://github.com/parkjessie)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Ajessie)|[Commits](https://github.com/B-G101/4Gs/commits?author=parkjessie)|
+|------|---------------------------|-----|--------|-----------------------------------|
+|Bria|[B-G101](https://github.com/B-G101)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Ab_g101)|[Commits](https://github.com/B-G101/4Gs/commits?author=B-G101)|[Bria and Jessie Journal](https://docs.google.com/document/d/1u6FFdRtdQ9SN0laWD_i7epVdj3GMWEwbYvWhkXnosMc/edit#)|
+|Nadira|[nadirahaddach](https://github.com/nadirahaddach)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Anadira)|[Commits](https://github.com/B-G101/4Gs/commits?author=nadirahaddach)|[Nadira and Paige Journal]()|
+|Paige|[paigemccartin](https://github.com/paigemccartin)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Apaige)|[Commits](https://github.com/B-G101/4Gs/commits?author=paigemccartin)|[Nadira and Paige Journal]()|
+|Jessie|[parkjessie](https://github.com/parkjessie)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Ajessie)|[Commits](https://github.com/B-G101/4Gs/commits?author=parkjessie)|[Bria and Jessie Journal](https://docs.google.com/document/d/1u6FFdRtdQ9SN0laWD_i7epVdj3GMWEwbYvWhkXnosMc/edit#)|
 ***
 ### Table of Contents
 1. [Week 0](https://github.com/B-G101/4Gs#week-0-organize-and-design)
@@ -19,12 +19,12 @@ Description of our project and its purpose
 ---
 ## Week 0: Organize and Design
 |Assigned Role|Person Assigned|Tasks for the Week|Commits/Evidence of Completion|
-|--------------------------------------------------|----------------------------------------------|----------------------------------------|------------------------------------------------------------|
-|Scrum Master|Nadira|About Me Page, Scrum Board Policies
-|GitHub Admin|Bria|About Me Page, Github Policies
-|Primary Designer|Paige|About Me Page, Wireframes, Brainwrite
-|Deployment Manager|Jessie|About Me Page
-|Operation Officer|Bria|
+|--------------------------------------------------|----------------------------------------------|----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+|Scrum Master|Nadira|About Me Page, Scrum Board Policies|1. [navbar dropdown](https://github.com/B-G101/4Gs/commit/f28ae1f8c6511d84677319c4ca0696b0b1eb7b92)<br> 2. [about me page](https://github.com/B-G101/4Gs/commit/ac4cf09434952363d6da2ab76a9babe7c5a83485)<br> 3. [nadira.html](https://github.com/B-G101/4Gs/commit/c84310234ab4680d351c637ceba3c093760c3417)<br> 4. [Scrum Board Policies](https://github.com/B-G101/4Gs/wiki/Documentation-Policies:) <br> 5. [Project Description](https://github.com/B-G101/4Gs/wiki/Project-Description:)|
+|GitHub Admin|Bria|About Me Page, Github Policies|1. [updated base and changed bria about me page](https://github.com/B-G101/4Gs/commit/c19a607c5768e718935180c85b1466530087e956) <br> 2. [change formatting of static a little bit, added api to my page, added the mask on mask off feature](https://github.com/B-G101/4Gs/commit/aee3e344a21f4b6175209e1fda5c3145515b530b) <br> 3. [finished api and fixed formatting on my about me page](https://github.com/B-G101/4Gs/commit/4372ef7a40f79034b8f86172ead53e2da4ba6988) <br> 4. [updated my about me page](https://github.com/B-G101/4Gs/commit/771906bbbe9135f14c2c058b99074c0bc5940f4a) <br> 5. [GitHub Policies and Contributing Guidelines](https://github.com/B-G101/4Gs/wiki/GitHub-Policies-and-Contributing-Guidelines)<br>|
+|Primary Designer|Paige|About Me Page, Wireframes, Brainwrite|1. [paige](https://github.com/B-G101/4Gs/commit/8bce3366b5d2fde7a8f546cbdd384213cc26be00)<br> 2. [paige](https://github.com/B-G101/4Gs/commit/a0dbf716936f53b5b5d9005b652461c9921d744f)<br> 3. [2.0 paige](https://github.com/B-G101/4Gs/commit/d7e0d72d90182cfc7e43bc76c154b6660d227b48)<br> 4. [paiges page](https://github.com/B-G101/4Gs/commit/7885008e9fc7eda77ab185ec2bd7288512dc6536)<br> 5. [paige 1](https://github.com/B-G101/4Gs/commit/f512f85071b4492632f3656a699a4c0a1705082b) <br> 6. [Brainwrite](https://docs.google.com/drawings/d/1ltqMKRWSBqYHVMn_gVzjgOdaO25_D81y8Zk2adEhV7I/edit) <br> 7. [Wireframes](https://docs.google.com/presentation/d/1HYEDRN5f7PYX6Mmf6sWR_N41fWu1qG4b9oOvJjNwqx4/edit?usp=sharing)<br>|
+|Deployment Manager|Jessie|About Me Page|[]()|
+|Operation Officer|Bria|No tasks for the week|
 
 
 
