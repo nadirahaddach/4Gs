@@ -14,6 +14,7 @@ Description of our project and its purpose
 ***
 ### Table of Contents
 1. [Week 0](https://github.com/B-G101/4Gs#week-0-organize-and-design)
+2. [Week 1](https://github.com/B-G101/4Gs/blob/main/README.md#week-1-project-approval)
 ---
 
 ## Week 1: Project Approval
