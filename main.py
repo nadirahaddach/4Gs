@@ -81,17 +81,9 @@ def jessie():
 def paige():
     return render_template("aboutus/paige.html")
 
-@app.route('/paigeapi/'), methods=['GET', 'POST'])
-def population():
-    search = " "
-    if request.form:
-        prediction = request.form.get("worldpop")
-        search = worldpopulation(prediction)
-        if len(prediction) != 0:  # input field has content
-            print("Please enter an input")
-        print(search)
-
-    return render_template("aboutus/paigeapi.html", fact=search)
+@app.route('/paigeapi/')
+def paigeapi():
+    return render_template("aboutus/paigeapi.html")
 
 @app.route('/aboutus/')
 def aboutus():
