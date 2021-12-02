@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+<!--block meta and add style-->
+
+{% block body %}
+
+    <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+    <!-- Title -->
+    <div class="col-12" style="text-align: center;">
+        <h1><strong>Sports Teams</strong></h1>
+
+        <!-- Sequence -->
+        <div class="col-12" style="text-align: left; ">
+            <table class="table">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Name Code</th>
+                    <th>Country</th>
+                    <th>Country Code</th>
+                </tr>
+                {% for sporty in sport.data %}
+                    <tr>
+                        <td>{{sporty.id}}</td>
+                        <td>{{sporty.name_full}}</td>
+                        <td>{{sporty.name_code}}</td>
+                        <td>{{sporty.country}}</td>
+                        <td>{{sporty.country_code}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <table class="table">
+                <tr>
+                    <th>Sport Data</th>
+                </tr>
+                <tr>
+                    <td>{{sport}}</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <style>
+        table, td, th {
+            border: 2px solid whitesmoke;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th {
+            height: 70px;
+        }
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        body,html {
+            background: lavender;
+        }
+        body {
+            color: rebeccapurple;
+        }
+    </style>
+{% endblock %}
+
