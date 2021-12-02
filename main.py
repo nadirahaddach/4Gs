@@ -3,6 +3,8 @@ from flask import Flask, render_template, request
 from templates.aboutus.briaapi import eightball
 # create a Flask instance
 app = Flask(__name__)
+import requests
+from flask import Flask, render_template, request
 
 
 # connects default URL to render index.html
@@ -35,6 +37,21 @@ def stub():
 @app.route('/nadira/')
 def nadira():
     return render_template("aboutus/nadira.html")
+
+@app.route('/nadirasapi', methods=['GET', 'POST'])
+def nadirasapi():
+    url = "https://sportscore1.p.rapidapi.com/sports/1/teams"
+    querystring = {"page":"1"}
+    headers = {
+        'x-rapidapi-host': "sportscore1.p.rapidapi.com",
+        'x-rapidapi-key': "a2dc907d76mshcd95463944ec47cp16d7a6jsn37846a41a807"
+    }
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    # team_list = json.loads(response.json())
+    # team_random = random.choice(team_list)
+    # print(json.dumps(team_random))
+    print(response.text)
+    return render_template("aboutus/nadirasapi.html", sport=response.json())
 
 
 @app.route('/bria/', methods=['GET', 'POST'])
