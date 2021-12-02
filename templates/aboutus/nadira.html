@@ -18,25 +18,46 @@ Link Crew, and NHS.</p>
 
 <table class="center">
     <tr>
-        <th>Photo</th>
         <th>More Info</th>
         <th>Links</th>
     </tr>
     <tr>
-        <td>Photo</td>
         <td>I play for City SC GA. In soccer, I play the 10 or CAM. I also enjoy playing the ukelele, drums,
-        and piano.</td>
+        and piano. My favorite color is purple and my favorite animal is a dolphin. I really like italian food
+            and LOVE cannolis.</td>
         <td><a href="https://docs.google.com/document/d/1huWsfI7-3COuK45SiUF5_T3DFpNmcoGLhiiLbFigpsU/edit?usp=sharing">Nadira and Paige Jornal</a>
+        <a href="https://docs.google.com/presentation/d/1HYEDRN5f7PYX6Mmf6sWR_N41fWu1qG4b9oOvJjNwqx4/edit#slide=id.p">Wireframe</a>
         </td>
     </tr>
-    <tr>
-        <td>Photo</td>
-        <td>Griffin</td>
-        <td><a href="https://docs.google.com/presentation/d/1HYEDRN5f7PYX6Mmf6sWR_N41fWu1qG4b9oOvJjNwqx4/edit#slide=id.p">Wireframe</a></td>
-    </tr>
 </table>
-
+<br>
+    <body class="center">
+    <img src="/static/assets/nadiramaskon.jpg" id="nadiramaskon" alt="Nadira Mask On" style="width: 400px; height: auto">
+    <input type="button" value="Mask Off" id="button1" onclick="changePhoto()">
+    <br>
+    <br>
 </body>
+
+    <script>
+        function changePhoto() {
+            if (document.getElementById("button1").value === "Mask Off") {
+                document.getElementById("nadiramaskon").src = "/static/assets/nadiramaskoff.jpg";
+                document.getElementById("button1").value = "Mask On";
+            }
+            else{
+                document.getElementById("nadiramaskon").src = "/static/assets/nadiramaskon.jpg";
+                document.getElementById("button1").value = "Mask Off";
+            }
+        }
+    </script>
+
+    <body class="center">
+        <h4>TEST THE API</h4>
+        <a class="button" target="_blank" href="/nadirasapi">Click Here</a>
+    <br>
+    <br>
+    </body>
+
 <style>
     table, td, th {
         border: 2px solid whitesmoke;
@@ -57,7 +78,7 @@ Link Crew, and NHS.</p>
         text-align: center;
     }
 
-    body {
+    body,html {
         background: lavender;
     }
     body {
