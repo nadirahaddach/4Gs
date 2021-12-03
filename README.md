@@ -8,8 +8,8 @@ Description of our project and its purpose
 |Contributor|Github ID/Profile|Assigned Tasks|Commits|Pair Journal|
 |------|---------------------------|-----|--------|-----------------------------------|
 |Bria|[B-G101](https://github.com/B-G101)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Ab_g101)|[Commits](https://github.com/B-G101/4Gs/commits?author=B-G101)|[Bria and Jessie Journal](https://docs.google.com/document/d/1u6FFdRtdQ9SN0laWD_i7epVdj3GMWEwbYvWhkXnosMc/edit#)|
-|Nadira|[nadirahaddach](https://github.com/nadirahaddach)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Anadira)|[Commits](https://github.com/B-G101/4Gs/commits?author=nadirahaddach)|[Nadira and Paige Journal]()|
-|Paige|[paigemccartin](https://github.com/paigemccartin)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Apaige)|[Commits](https://github.com/B-G101/4Gs/commits?author=paigemccartin)|[Nadira and Paige Journal]()|
+|Nadira|[nadirahaddach](https://github.com/nadirahaddach)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Anadira)|[Commits](https://github.com/B-G101/4Gs/commits?author=nadirahaddach)|[Nadira and Paige Journal](https://docs.google.com/document/d/1huWsfI7-3COuK45SiUF5_T3DFpNmcoGLhiiLbFigpsU/edit)|
+|Paige|[paigemccartin](https://github.com/paigemccartin)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Apaige)|[Commits](https://github.com/B-G101/4Gs/commits?author=paigemccartin)|[Nadira and Paige Journal](https://docs.google.com/document/d/1huWsfI7-3COuK45SiUF5_T3DFpNmcoGLhiiLbFigpsU/edit)|
 |Jessie|[parkjessie](https://github.com/parkjessie)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Ajessie)|[Commits](https://github.com/B-G101/4Gs/commits?author=parkjessie)|[Bria and Jessie Journal](https://docs.google.com/document/d/1u6FFdRtdQ9SN0laWD_i7epVdj3GMWEwbYvWhkXnosMc/edit#)|
 ***
 ### Table of Contents
