@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 {% extends "layouts/base.html" %}
+<head>
+    <meta charset="UTF-8">
+    <title>Bria's About Me</title>
+
+</head>
 
 {% block body %}
 
@@ -8,43 +13,75 @@
     html, body{
         background-color: #788585;
     }
-    h1 {
+    h2 {
         color: #B1B6A6;
         animation-name: example;
         animation-duration: 10s;
-        position: relative;
+        position: center;
         animation-fill-mode: both;
     }
-    h3 {
+    h2,p,table,h3 {
+        text-align: center;
+    }
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .center {
         text-align: center;
     }
     @keyframes example {
-        from   {color:#B1B6A6; left:0; top:0;}
-        20%  {color:#9CAEA9; left:200px; top:0;}
-        40%  {color:#819595; left:200px; top:200px;}
-        60%  {color:#696773; left:0; top:200px;}
-        80%  {color:#B1B6A6; left:0; top:0;}
-        to {color:#788585; left:200px; top:0; text-shadow: 1px 1px 2px #696773, 0 0 25px #B1B6A6, 0 0 5px #f1f1f1;}
+        from   {color:#B1B6A6;}
+        20%  {color:#9CAEA9;}
+        40%  {color:#819595;}
+        60%  {color:#696773;}
+        80%  {color:#B1B6A6;}
+        to {color:#788585; text-shadow: 1px 1px 2px #696773, 0 0 25px #B1B6A6, 0 0 5px #f1f1f1;}
     }
     img, input, a {
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
+    table, td, th {
+        border: 2px solid #696773;
+    }
+    table {
+        border-collapse: collapse;
+        width: 80%;
+    }
+    th {
+        height: 70px;
+    }
 </style>
     <body>
+    <div class="center">
+        <h2>Bria Gilliam</h2>
+        <p>Hi Welcome to my about me page! My name is Bria Gilliam and I am a junior. I am the Github Admin and Technical Officer for my group. I am in yearbook and enjoy photography. I love hanging out with my friends, listening to music, and traveling. I hope you enjoy my about me page!</p>
+    </div>
 
-        <h1>Welcome to Bria's About me</h1>
+    <table class="center">
+        <tr>
+            <th>More Info</th>
+            <th>Links</th>
+        </tr>
+        <tr>
+            <td>I am an editor on the yearook staff, and I love working with design. This is my first year coding, so I love learning about all the different programming languages and how to create our own website. </td>
+            <td><a href="https://docs.google.com/document/d/e/2PACX-1vTPMuGiOHfJBdrBPX5YmiDXFeqBl-jDDcHnv0pB8RpevYS4wkS59LU-dF1g4am5PD4jhTMeK1J8PlEB/pub">Bria and Jessie Journal</a>
+                <a href="https://github.com/B-G101/4Gs/wiki/GitHub-Policies-and-Contributing-Guidelines">Github Management Policies</a>
+            </td>
+        </tr>
+    </table>
+
         <img src="/static/assets/briamaskon.jpg" id="briamaskon" alt="Bria Mask On" style="width: 400px; height: auto">
         <input type="button" value="Take Mask Off" id="button1" onclick="changePhoto()">
     <br>
     <br>
-        <a class="button" target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vTPMuGiOHfJBdrBPX5YmiDXFeqBl-jDDcHnv0pB8RpevYS4wkS59LU-dF1g4am5PD4jhTMeK1J8PlEB/pub">Bria and Jessie Pair Journal!</a>
-        <br>
-        <br>
+    <body class="center">
         <h3>Test the Magic Eightball!</h3>
         <a class="button" target="_blank" href="/briasapi/">Click Here</a>
-
+    </body>
     </body>
     <script>
     function changePhoto() {
