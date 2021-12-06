@@ -81,7 +81,7 @@ def jessie():
 def paige():
     return render_template("aboutus/paige.html")
 
-@app.route('/paigeapi/'), methods=['GET', 'POST'])
+@app.route('/paigeapi/', methods=['GET', 'POST'])
 def population():
     search = " "
     if request.form:
