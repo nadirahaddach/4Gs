@@ -4,39 +4,59 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Nadira's About Me</title>
+
 </head>
 {% block body %}
     <body>
     <div class="center">
         <h2>Jessie Park</h2>
-        <p>Hi, my names Jessie and I am the deployment manager for our team. I like art and video games.</p>
+        <p>Hi, my names Jessie and I am the deployment manager for our team. I make sure to deploy our website every Fridays. Outside of class I like doing art and volunteering.</p>
     </div>
 
-    <body>
-    <img src="/static/assets/jessiemaskon.jpg" id="jessiemaskon" alt=" Mask On" style="width: 400px; height: auto">
-    <input type="button" value="Take Mask Off" id="button1" onclick="changePhoto()">
+    <table class="center">
+        <tr>
+            <th>More Info</th>
+            <th>Links</th>
+        </tr>
+        <tr>
+            <td>I am one of the leaders for the AMASE organization, and I also work as a TA for Korean school. My hobbies are drawing, singing, and swimming. My favorite color is green.</td>
+            <td><a href="https://docs.google.com/document/d/e/2PACX-1vTPMuGiOHfJBdrBPX5YmiDXFeqBl-jDDcHnv0pB8RpevYS4wkS59LU-dF1g4am5PD4jhTMeK1J8PlEB/pub">Jessie and Bria Journal</a>
+                <a href="https://docs.google.com/presentation/d/1HYEDRN5f7PYX6Mmf6sWR_N41fWu1qG4b9oOvJjNwqx4/edit#slide=id.p">Wireframe</a>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <body class="center">
+    <img src="/static/assets/jessiemaskon.jpg" id="jessiemaskon" alt="Jessie Mask On" style="width: 400px; height: auto">
+    <input type="button" value="Mask Off" id="button1" onclick="changePhoto()">
     <br>
     <br>
-    <a class="button" target="_blank" href="https://docs.google.com/document/d/1huWsfI7-3COuK45SiUF5_T3DFpNmcoGLhiiLbFigpsU/edit">Journal!</a>
-
     </body>
+
     <script>
         function changePhoto() {
-            if (document.getElementById("button1").value === "Take Mask Off") {
+            if (document.getElementById("button1").value === "Mask Off") {
                 document.getElementById("jessiemaskon").src = "/static/assets/jessiemaskoff.jpg";
-                document.getElementById("button1").value = "Put Mask On";
+                document.getElementById("button1").value = "Mask On";
             }
             else{
                 document.getElementById("jessiemaskon").src = "/static/assets/jessiemaskon.jpg";
-                document.getElementById("button1").value = "Take Mask Off";
+                document.getElementById("button1").value = "Mask Off";
             }
         }
     </script>
+
+    <body class="center">
+    <h4>TEST THE API</h4>
+    <a class="button" target="_blank" href="/jessiesapi">Click Here</a>
+    <br>
+    <br>
     </body>
+
     <style>
         table, td, th {
-            border: 1px solid whitesmoke;
+            border: 2px solid whitesmoke;
         }
         table {
             border-collapse: collapse;
@@ -54,8 +74,8 @@
             text-align: center;
         }
 
-        body {
-            background: darkseagreen;
+        body,html {
+            background: #cff1df;
         }
         body {
             color: #226d43;
