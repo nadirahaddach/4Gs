@@ -1,19 +1,15 @@
 import requests
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template
 
-from pathlib import \
-    Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
-
-app_starter = Blueprint('starter', __name__,
-                        url_prefix='/starter',
-                        template_folder='templates/',
+app_starter = Blueprint('aboutus', __name__,
+                        url_prefix='/',
+                        template_folder='templates/aboutus/',
                         static_folder='static',
                         static_url_path='assets')
 
 
-@app_starter.route('/paigeapi', methods=['GET', 'POST'])
-def population():
 
+def population():
     url = "https://world-population.p.rapidapi.com/worldpopulation"
 
     headers = {
@@ -22,7 +18,7 @@ def population():
     }
 
     response = requests.request("GET", url, headers=headers)
-    factt = response.json().get('world_population')
-    return render_template("paigeapi.html", factt=factt)
 
-print(response.text)
+    factt = response.json()
+
+    return render_template("/paigeapi.html", factt=factt)

@@ -2,25 +2,37 @@
 {% extends "layouts/base.html" %}
 <html lang="en">
 
-{% block body %}
+
 <head>
     <p style="color:#0e440e;font-size:35px;font-family:calibri">About us</p>
 </head>
 
+{% block body %}
 <body>
+
 <div class="center">
+    <h2>About Us</h2>
     <h2>Paige McCartin</h2>
     <p>Hi, my names Paige and I am the primary designer for our team. I play Varisty Girls Volleyball and participate in clubs such as Gardening for Change,
         Link Crew, and NHS.</p>
 </div>
-
+<table class="center">
+    <tr>
+        <th>More Info</th>
+        <th>Links</th>
+    </tr>
+    <tr>
+        <td>I play for San Diego volleyball club. I have a sister who is a senior at Del Norte. My favorite color is purple. I have a goldendoodle named Cooper. I also have two cats named Beverly and Bentley.</td>
+        <td><a href="https://docs.google.com/document/d/1huWsfI7-3COuK45SiUF5_T3DFpNmcoGLhiiLbFigpsU/edit?usp=sharing">Nadira and Paige Jornal</a>
+            <a href="https://docs.google.com/presentation/d/1HYEDRN5f7PYX6Mmf6sWR_N41fWu1qG4b9oOvJjNwqx4/edit#slide=id.p">Wireframe</a>
+        </td>
+    </tr>
+</table>
+<br>
     <body class="center">
         <img src="/static/assets/paigemaskon.jpg" id="paigemaskon" alt=" Mask On" style="width: 400px; height: auto">
         <input type="button" value="Take Mask Off" id="button1" onclick="changePhoto()">
     <br>
-    <br>
-        <a class="button" target="_blank" href="https://docs.google.com/document/d/1huWsfI7-3COuK45SiUF5_T3DFpNmcoGLhiiLbFigpsU/edit">Paige and Nadira Pair Journal!</a>
-        <br>
         <br>
         <h3>What is the world population?</h3>
         <a class="button" target="_blank" href="/paigeapi/">Click Here to Find Out!</a>
@@ -67,4 +79,5 @@
     }
 </style>
 {% endblock %}
+
 </html>

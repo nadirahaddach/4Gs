@@ -1,10 +1,14 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
+import requests
 from templates.aboutus.briaapi import eightball
+from templates.aboutus.paigeapi import app_starter
+
 # create a Flask instance
 app = Flask(__name__)
-import requests
-from flask import Flask, render_template, request
+app.register_blueprint(app_starter)
+
+
 
 
 # connects default URL to render index.html
@@ -81,9 +85,6 @@ def jessie():
 def paige():
     return render_template("aboutus/paige.html")
 
-@app.route('/paigeapi/')
-def paigeapi():
-    return render_template("aboutus/paigeapi.html")
 
 @app.route('/aboutus/')
 def aboutus():
