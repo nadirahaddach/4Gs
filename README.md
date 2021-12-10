@@ -15,8 +15,19 @@ Description of our project and its purpose
 ### Table of Contents
 1. [Week 0](https://github.com/B-G101/4Gs/blob/main/README.md#week-0-organize-and-design)
 2. [Week 1](https://github.com/B-G101/4Gs/blob/main/README.md#week-1-project-approval)
+3. [Week 2](https://github.com/B-G101/4Gs/blob/main/README.md#week-2-home-pages)
 ---
 
+## Week 2: Home Pages
+|Assigned Role|Person Assigned|Tasks for the Week|Commits/Evidence of Completion|
+|--------------------------------------------------|----------------------------------------------|----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+|Scrum Master|Nadira|About Me Page|1. [nadira.html](https://github.com/B-G101/4Gs/commit/c84310234ab4680d351c637ceba3c093760c3417)<br> 2. [Scrum Board Policies](https://github.com/B-G101/4Gs/wiki/Documentation-Policies:) <br> 3. [Project Description](https://github.com/B-G101/4Gs/wiki/Project-Description:)||
+|GitHub Admin|Bria|About Me Page|1. [made bria about me consistant with the design standards](https://github.com/B-G101/4Gs/commit/db01be684899a2a86b727f92b3e57088966b9c7a)<br> |
+|Primary Designer|Paige|About Me Page|1. [fixed base](https://github.com/B-G101/4Gs/commit/4de0684ec1b4a0c243bf95e4237ab13a75ba42d1)<br> 2. [PAIGE CODES LIKE A PRO](https://github.com/B-G101/4Gs/commit/d5daaa07dccf08b77cbb27042162446c8e2e72ff)<br> 3. [paige improved](https://github.com/B-G101/4Gs/commit/660d0e305ae998e0f83ee7399560a2c3a2de95c0)<br>|
+|Deployment Manager|Jessie|About Me Page, Deployment wiki|1. [individual page jessie](https://github.com/B-G101/4Gs/commit/e483795d6abfa565f38f7f53ef1521285d308aca)<br>|
+|Technical Officer|Bria|Ideas for Technicals| 1. [Brainstorming for 10-15 technical ideas](https://docs.google.com/drawings/d/1ltqMKRWSBqYHVMn_gVzjgOdaO25_D81y8Zk2adEhV7I/edit)|
+
+---
 ## Week 1: Project Approval
 |Assigned Role|Person Assigned|Tasks for the Week|Commits/Evidence of Completion|
 |--------------------------------------------------|----------------------------------------------|----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
