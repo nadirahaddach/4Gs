@@ -17,7 +17,7 @@ Description of our project and its purpose
 2. [Week 1](https://github.com/B-G101/4Gs/blob/main/README.md#week-1-project-approval)
 ---
 
-## Week 2: About Pages
+## Week 2: Home Pages
 |Assigned Role|Person Assigned|Tasks for the Week|Commits/Evidence of Completion|
 |--------------------------------------------------|----------------------------------------------|----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 |Scrum Master|Nadira|About Me Page, Scrum Board Policies, Ideas for Technicals|1. [nadira.html](https://github.com/B-G101/4Gs/commit/c84310234ab4680d351c637ceba3c093760c3417)<br> 2. [Scrum Board Policies](https://github.com/B-G101/4Gs/wiki/Documentation-Policies:) <br> 3. [Project Description](https://github.com/B-G101/4Gs/wiki/Project-Description:)||
