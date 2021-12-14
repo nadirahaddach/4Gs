@@ -1,5 +1,5 @@
 # [Team 4Gs](https://github.com/B-G101/4Gs)
-Runtime link: to be added :)
+Runtime link: [4G-coders.cf](4G-coders.cf)
 ### [Scrum Board](https://github.com/B-G101/4Gs/projects/1)
 ### Project Purpose
 Description of our project and its purpose
