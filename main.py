@@ -2,14 +2,9 @@
 from flask import Flask, render_template, request
 import requests
 from templates.aboutus.briaapi import eightball
-from templates.aboutus.paigeapi import app_starter
 
 # create a Flask instance
 app = Flask(__name__)
-app.register_blueprint(app_starter)
-
-
-
 
 # connects default URL to render index.html
 @app.route('/')
@@ -79,6 +74,20 @@ def eightballapi():
 @app.route('/jessie/')
 def jessie():
     return render_template("aboutus/jessie.html")
+
+
+@app.route('/paigeapi/', methods=['GET', 'POST'])
+def population():
+    url = "https://world-population.p.rapidapi.com/worldpopulation"
+    headers = {
+        'x-rapidapi-key': "4ead57fd33mshf1561aa23889096p18583ejsncb8b90ef517c",
+        'x-rapidapi-host': "world-population.p.rapidapi.com"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+    stats = response.json()
+    pop = stats['body']['world_population']
+    return render_template("aboutus/paigeapi.html", stats=pop)
 
 
 @app.route('/paige/')
