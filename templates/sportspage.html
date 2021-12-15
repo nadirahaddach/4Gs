@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block body %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trimester 1 Sports Information</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial (sans-serif;);
+      margin: 0;
+    }
+
+    .picture {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 8px;
+    }
+
+    .tri1-welcome {
+      padding: 30px;
+      text-align: center;
+      background-color:forestgreen;
+      color: white;
+    }
+
+    .row {
+      padding: 25px;
+      text-align: left;
+      background-color:navy;
+      color:white;
+    }
+
+    .text {
+      font-size: 20px;
+      color:black;
+    }
+
+    .extra-info {
+      padding: 20px;
+      text-align:center;
+      background-color:whitesmoke;
+      color:black;
+    }
+
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color:forestgreen;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .button:hover {
+      background-color:lightgreen;
+    }
+
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="tri1-welcome">
+  <h1>Learn about the Trimester 1 Sports </h1>
+  <p>Read up about the sports, and learn about how they fare at Del Norte High School!</p>
+  <p class="dropdown">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button" style="font-size: 20px;color: white">
+        Sports
+      </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <a class="dropdown-item" href="#Volley" style="color: forestgreen">Baseball</a>
+    <a class="dropdown-item" href="#Ch" style="color: navy">Golf</a>
+    <a class="dropdown-item" href="#soft" style="color: forestgreen">Softball</a>
+    <a class="dropdown-item" href="#XC" style="color: navy">Gymnastics</a>
+    <a class="dropdown-item" href="#Dan" style="color: forestgreen">Swim & Dive</a>
+    <a class="dropdown-item" href="#FH" style="color: navy">Boys' Tennis</a>
+    <a class="dropdown-item" href="#Golfs" style="color: forestgreen">Track and Field</a>
+    <a class="dropdown-item" href="#Ten" style="color: navy">Boys' Volleyball</a>
+    <a class="dropdown-item" href="#Polos" style="color: navy">Water polo</a>
+  </div>
+</div>
+
+
+<div class="row">
+  <h1>Football </h1>
+  <div class="picture">
+    <img src="/static/assets/footballjits.JPG" alt="connor" style="width:30%">
+  </div>
+</div>
+<div class="text">
+  <p id="FB" style="text-align: center; font-size: larger">Click for more information!</p>
+
+  <script>
+    document.getElementById("FB").onclick = function() {myFunction1()};
+
+    function myFunction1() {
+      document.getElementById("FB").innerHTML = "Football is a team sport that is played on a rectangular field. The object of the game is to get the oval-shaped football down the field, either by running it or passing it. The goal is to get the football into the opponent's end zone.";
+    }
+  </script>
+</div>
+<div class="extra-info">
+  <table>
+    <tr>
+      <th>2021 Division:</th>
+      <th>2019 Record:</th>
+      <th>League:</th>
+    </tr>
+    <tr>
+      <td>Division IV</td>
+      <td>2-9</td>
+      <td>Palomar</td>
+    </tr>
+  </table>
+
+</div>
+
+<div class="row">
+  <h1>Girls Volleyball </h1>
+  <div class="picture">
+    <img src="/static/assets/volleyball.jpeg" alt="volleyball" style="width:30%">
+  </div>
+</div>
+<div class="text">
+  <p id="demo" style="text-align: center; font-size: larger; color: #111111">Click for more information!</p>
+
+  <script>
+    document.getElementById("demo").onclick = function() {myFunction()};
+
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Girls Volleyball is a competative sport, each team puts out six players on each side of the net. There they try to not let the ball touch the ground using only three touches. They are also trying to get the ball to land on the ground of the other team, across the net. The team that accomplishes that receives a point. They play sets that go up to 25 points. First team that wins 25 points wins the set. On varsity we play best out of five sets. If we play to the fifth set, that game is to 15 points.";
+    }
+  </script>
+</div>
+<div class="extra-info">
+  <table>
+    <tr>
+      <th>2021 Division:</th>
+      <th>2019 Record:</th>
+      <th>League:</th>
+    </tr>
+    <tr>
+      <td>Division I</td>
+      <td>3-5</td>
+      <td>Palomar</td>
+    </tr>
+  </table>
+
+</div>
+<div class="row">
+  <h1>Cheer </h1>
+  <div class="picture">
+    <img src="/static/assets/cheer.jpeg" alt="cheer" style="width:30%">
+  </div>
+</div>
+<div class="text">
+  <p id="cheer" style="text-align: center; font-size: larger">Click for more information!</p>
+
+  <script>
+    document.getElementById("cheer").onclick = function() {myFunction2()};
+
+    function myFunction2() {
+      document.getElementById("cheer").innerHTML = "Cheerleading is an activity in which the participants cheer for their team as a form of encouragement. It can range from chanting slogans to intense physical activity. It can be performed to motivate sports teams, to entertain the audience, or for competition. Cheerleading requires a lot of spirit. Cheering at Del Norte includes stunting, chanting, and dancing. The cheerleaders cheer for the Varsity football team and the varsity basketball team.";
+    }
+  </script>
+</div>
+<div class="extra-info">
+  <table>
+    <tr>
+      <th>2021 Division:</th>
+      <th>2019 Record:</th>
+      <th>League:</th>
+    </tr>
+    <tr>
+      <td>None</td>
+      <td>none</td>
+      <td>None</td>
+    </tr>
+  </table>
+
+</div>
+<div class="row">
+  <h1>Cross Country</h1>
+  <div class="picture">
+    <img src="/static/assets/crosscountry.jpeg" alt="crosscountry" style="width:30%">
+  </div>
+</div>
+<div class="text">
+  <p id="XC" style="text-align: center; font-size: larger">Click for more information!</p>
+
+  <script>
+    document.getElementById("XC").onclick = function() {myFunction3()};
+
+    function myFunction3() {
+      document.getElementById("XC").innerHTML = "Cross country running is a sport in which teams and individuals run a race on open-air courses over natural terrain such as dirt or grass. Sometimes the runners are referred to as harriers.";
+    }
+  </script>
+  <div class="extra-info">
+    <table>
+      <tr>
+        <th>2021 Division:</th>
+        <th>2019 Record:</th>
+        <th>League:</th>
+      </tr>
+      <tr>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+<div class="row">
+  <h1>Dance </h1>
+  <div class="picture">
+    <img src="/static/assets/dance.jpeg" alt="dance" style="width:30%">
+  </div>
+</div>
+<div class="text">
+  <p id="Dance" style="text-align: center; font-size: larger">Click for more information!</p>
+
+  <script>
+    document.getElementById("Dance").onclick = function() {myFunction4()};
+
+    function myFunction4() {
+      document.getElementById("Dance").innerHTML = "The High School Dance program emphasizes the development of the dancer-artist in technical skill, artistic creativity and versatility. Concentrations are offered in Ballet and Contemporary Dance, but include cross-training and collaboration for a well-rounded understanding of the discipline.";
+    }
+  </script>
+  <div class="extra-info">
+    <table>
+      <tr>
+        <th>2021 Division:</th>
+        <th>2019 Record:</th>
+        <th>League:</th>
+      </tr>
+      <tr>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="row">
+  <h1>Field Hockey </h1>
+  <div class="picture">
+    <img src="/static/assets/NatalieFieldHockey.jpg" alt="Natalie" style="width:30%">
+  </div>
+</div>
+<div class="text">
+  <p id="FH" style="text-align: center; font-size: larger">Click for more information!</p>
+
+  <script>
+    document.getElementById("FH").onclick = function() {myFunction5()};
+
+    function myFunction5() {
+      document.getElementById("FH").innerHTML = "Field hockey is a team sport of the hockey family. Each team plays with ten field players and a goalkeeper, and must carry a round, hard, plastic hockey ball with a hockey stick to the rival goal.";
+    }
+  </script>
+  <div class="extra-info">
+    <table>
+      <tr>
+        <th>2021 Division:</th>
+        <th>2019 Record:</th>
+        <th>League:</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>/</td>
+        <td>/</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="row">
+  <h1>Girls Golf </h1>
+  <div class="picture">
+    <img src="/static/assets/girlsgolf.jpeg" alt="girlsgolf" style="width:30%">
+  </div>
+</div>
+<div class="text">
+  <p id="golf" style="text-align: center; font-size: larger">Click for more information!</p>
+
+  <script>
+    document.getElementById("golf").onclick = function() {myFunction6()};
+
+    function myFunction6() {
+      document.getElementById("golf").innerHTML = "Golf is a cross-country game in which a player strikes a small ball with various clubs from a series of starting points (teeing grounds) into a series of holes on a course. The player who holes his ball in the fewest strokes wins.";
+    }
+  </script>
+  <div class="extra-info">
+    <table>
+      <tr>
+        <th>2021 Division:</th>
+        <th>2019 Record:</th>
+        <th>League:</th>
+      </tr>
+      <tr>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="row">
+  <h1>Girls Tennis </h1>
+  <div class="picture">
+    <img src="/static/assets/tennis.jpeg" alt="cheer" style="width:30%">
+  </div>
+</div>
+<div class="text">
+  <p id="Tennis" style="text-align: center; font-size: larger">Click for more information!</p>
+
+  <script>
+    document.getElementById("Tennis").onclick = function() {myFunction7()};
+
+    function myFunction7() {
+      document.getElementById("Tennis").innerHTML = "Tennis is a racket sport that can be played individually against a single opponent or between two teams of two players each. Each player uses a tennis racket that is strung with cord to strike a hollow rubber ball covered with felt over or around a net and into the opponent's court.";
+    }
+  </script>
+  <div class="extra-info">
+    <table>
+      <tr>
+        <th>2021 Division:</th>
+        <th>2019 Record:</th>
+        <th>League:</th>
+      </tr>
+      <tr>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="row">
+  <h1>Boys Water Polo </h1>
+  <div class="picture">
+    <img src="/static/assets/waterpolo.jpeg" alt="waterpolo" style="width:30%">
+  </div>
+</div>
+<div class="text">
+  <p id="WP" style="text-align: center; font-size: larger">Click for more information!</p>
+
+  <script>
+    document.getElementById("WP").onclick = function() {myFunction8()};
+
+    function myFunction8() {
+      document.getElementById("WP").innerHTML = "Water polo is a competitive team sport played in water between two teams of seven players each. The game consists of four quarters in which the two teams attempt to score goals by throwing the ball into the opposing team's goal. The team with the most goals at the end of the game wins the match.";
+    }
+  </script>
+
+  <div class="extra-info">
+    <table>
+      <tr>
+        <th>2021 Division:</th>
+        <th>2019 Record:</th>
+        <th>League:</th>
+      </tr>
+      <tr>
+        <td>D1</td>
+        <td>7-5</td>
+        <td>Palomar</td>
+      </tr>
+    </table>
+  </div>
+  <body>
+  <input type="text" placeholder="Do you want to print this page?" id="wish">
+  <script>
+    function cond(){
+      var a=document.getElementById("wish").value;
+      if(a=="yes"){
+        print("Print");
+      }
+      else if(a=="no"){
+        document.write("Click back to return to homepage");
+      }
+      else{
+        print("Print")
+      }
+    }
+  </script>
+  <button type="button" onclick="cond()">Submit</button>
+
+  </body>
+</div>
+</body>
+</html>
+{% endblock %}
