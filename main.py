@@ -1,10 +1,13 @@
 # import "packages" from flask
-from flask import Flask, render_template, request
+from flask import render_template, request
 import requests
 from templates.aboutus.briaapi import eightball
+from crud.app_crud import app_crud
+from __init__ import app
+
 
 # create a Flask instance
-app = Flask(__name__)
+app.register_blueprint(app_crud)
 
 # connects default URL to render index.html
 @app.route('/')
@@ -98,6 +101,12 @@ def paige():
 @app.route('/aboutus/')
 def aboutus():
     return render_template("aboutus/aboutus.html")
+
+
+@app.route('/councelorsearch/')
+def councelorsearch():
+    return render_template("councelorsearch.html")
+
 
 
 # runs the application on the development server
