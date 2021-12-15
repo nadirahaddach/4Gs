@@ -94,6 +94,11 @@ def population():
 def paige():
     return render_template("aboutus/paige.html")
 
+@app.route('/clubs/')
+def clubs():
+    return render_template("clubsdnhs.html")
+
+
 
 @app.route('/aboutus/')
 def aboutus():
