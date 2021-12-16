@@ -99,7 +99,11 @@ def paige():
 
 @app.route('/clubs/')
 def clubs():
-    return render_template("clubsdnhs.html")
+    return render_template("clubpage.html")
+
+@app.route('/homepage/')
+def homepage():
+    return render_template("homepage.html")
 
 
 @app.route('/aboutus/')
