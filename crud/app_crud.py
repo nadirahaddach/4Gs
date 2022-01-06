@@ -35,7 +35,7 @@ def users_all():
 def users_ilike(term):
     """filter Users table by term into JSON list """
     term = "%{}%".format(term)  # "ilike" is case insensitive and requires wrapped  %term%
-    table = Users.query.filter((Users.name.ilike(term)) | (Users.email.ilike(term)))
+    table = Users.query.filter((Users.name.ilike(term)))
     return [peep.read() for peep in table]
 
 
@@ -46,9 +46,6 @@ def user_by_id(userid):
 
 
 # User extraction from SQL
-def user_by_email(email):
-    """finds User in table matching email """
-    return Users.query.filter_by(email=email).first()
 
 
 """ app route section """
@@ -68,9 +65,8 @@ def create():
     if request.form:
         po = Users(
             request.form.get("name"),
-            request.form.get("email"),
-            request.form.get("password"),
-            request.form.get("phone")
+            request.form.get("grade"),
+            request.form.get("advice")
         )
         po.create()
     return redirect(url_for('crud.crud'))
@@ -137,12 +133,12 @@ def search_term():
 class UsersAPI:
     # class for create/post
     class _Create(Resource):
-        def post(self, name, email, password, phone):
-            po = Users(name, email, password, phone)
+        def post(self, name, grade, advice):
+            po = Users(name, grade, advice)
             person = po.create()
             if person:
                 return person.read()
-            return {'message': f'Processed {name}, either a format error or {email} is duplicate'}, 210
+            return {'message': f'Processed {name}, a format error'}, 210
 
     # class for read/get
     class _Read(Resource):
@@ -156,19 +152,13 @@ class UsersAPI:
 
     # class for update/put
     class _Update(Resource):
-        def put(self, email, name):
-            po = user_by_email(email)
-            if po is None:
-                return {'message': f"{email} is not found"}, 210
+        def put(self, name):
             po.update(name)
             return po.read()
 
     class _UpdateAll(Resource):
-        def put(self, email, name, password, phone):
-            po = user_by_email(email)
-            if po is None:
-                return {'message': f"{email} is not found"}, 210
-            po.update(name, password, phone)
+        def put(self, name, password, grade, advice):
+            po.update(name, password, grade, advice)
             return po.read()
 
     # class for delete
@@ -182,11 +172,11 @@ class UsersAPI:
             return data
 
     # building RESTapi resource
-    api.add_resource(_Create, '/create/<string:name>/<string:email>/<string:password>/<string:phone>')
+    api.add_resource(_Create, '/create/<string:name>/<string:grade>/<string:advice>')
     api.add_resource(_Read, '/read/')
     api.add_resource(_ReadILike, '/read/ilike/<string:term>')
-    api.add_resource(_Update, '/update/<string:email>/<string:name>')
-    api.add_resource(_UpdateAll, '/update/<string:email>/<string:name>/<string:password>/<string:phone>')
+    api.add_resource(_Update, '/update/<string:name>')
+    api.add_resource(_UpdateAll, '/update/<string:name>/<string:grade>/<string:advice>')
     api.add_resource(_Delete, '/delete/<int:userid>')
 
 
