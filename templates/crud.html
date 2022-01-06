@@ -50,15 +50,10 @@
 <!-- CONTENT (in <body>), content for this page -->
 {% block body %}
     <div class="container py-4 text-light bg-success">
-        <header class="pb-3 mb-4 border-bottom">
-            <div class="d-flex align-items-center text-light text-decoration-none">
-                <span class="fs-4">SQL CRUD Admin Page</span>
-            </div>
-        </header>
 
         <div class="container py-4">
             <div class="p-5 mb-4 bg-light text-dark rounded-3">
-                <h2>Table Viewer</h2>
+                <h2>Share Your Advice</h2>
                 <div class="row align-items-md-stretch">
                     <table class="table">
                         <tbody>
@@ -78,9 +73,8 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Name</th>
-                                <th>Email</th>
-                                <th>Password</th>
-                                <th>Phone</th>
+                                <th>Grade</th>
+                                <th>Advice</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -88,16 +82,13 @@
                             {% for row in table %}
                                 <!--
                                 Prepare table for display
-                                    caution: phone number needs "~" format step to force type to string
+                                    caution: grade number needs "~" format step to force type to string
                                 -->
-                                {% set pn = "" ~ row['phone'] %}
-                                {% set pnf = "(" ~ pn[0:3] ~ ")" ~ pn[3:6] ~ "-" ~ pn[6:10] %}
                                 <tr>
                                     <td>{{ row['userID'] }}</td>
                                     <td>{{ row['name'] }}</td>
-                                    <td>{{ row['email'] }}</td>
-                                    <td>{{ row['password'] }}</td>
-                                    <td>{{ pnf }}</td>
+                                    <td>{{ row['grade'] }}</td>
+                                    <td>{{ row['advice'] }}</td>
                                 </tr>
                             {% endfor %}
                             </tbody>
@@ -117,17 +108,15 @@
                         <thead>
                         <tr>
                             <th><label for="name">Name</label></th>
-                            <th><label for="email">Email</label></th>
-                            <th><label for="password">Password</label></th>
-                            <th><label for="phone">Phone</label></th>
+                            <th><label for="grade">Grade</label></th>
+                            <th><label for="advice">Advice</label></th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td><input type="text" name="name" id="name" required></td>
-                            <td><input type="email" name="email" id="email" placeholder="abc@xyz.org" required></td>
-                            <td><input type="password" name="password" id="password" required></td>
-                            <td><input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="1234567890" required></td>
+                            <td><input type="text" name="grade" pattern="[0-2|9]{0,2}" id="grade" required></td>
+                            <td><input type="text" name="advice" id="advice" required></td>
                             <td><input type="submit" value="Create"></td>
                         </tr>
                         </tbody>
