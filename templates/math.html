@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+<html lang="en">
+
+
+{% block body %}
+<body>
+
+<div class="center">
+  <h2>Math Paths</h2>
+  <p>Below are the different path of math a student could take. Look around to see what fits best for you.</p>
+</div>
+<table class="center">
+  <tr>
+    <th>9</th>
+    <th>th</th>
+    <th>Grade</th>
+    <th>-</th>
+    <th>10</th>
+    <th>th</th>
+    <th>grade</th>
+    <th>-</th>
+    <th>11</th>
+    <th>th</th>
+    <th>Grade</th>
+    <th>-</th>
+    <th>12</th>
+    <th>th</th>
+    <th>grade</th>
+  </tr>
+  <tr>
+    <th>TRI 1</th>
+    <th>TRI 2</th>
+    <th>TRI 3</th>
+    <th>-</th>
+    <th>TRI 1</th>
+    <th>TRI 2</th>
+    <th>TRI 3</th>
+    <th>-</th>
+    <th>TRI 1</th>
+    <th>TRI 2</th>
+    <th>TRI 3</th>
+    <th>-</th>
+    <th>TRI 1</th>
+    <th>TRI 2</th>
+    <th>TRI 3</th>
+  </tr>
+  <tr>
+    <td>Math Accel</td>
+    <td>Int. 1 a</td>
+    <td>Int. 1 b</td>
+    <td>-></td>
+    <td>Int. 2 a</td>
+    <td>Int 2 b</td>
+    <td>Trig</td>
+    <td>-></td>
+    <td>Int. 3a</td>
+    <td>Int. 3b</td>
+    <td>Pre-Calc 1</td>
+    <td>-></td>
+    <td>AFA 1/APStats 1/APCalc AB</td>
+    <td>AFA 2/APStats 2/APCalc AB</td>
+    <td>Pre-Calc 1/Stats/Pre-Calc 1</td>
+  </tr>
+</table>
+<br>
+<table class="center">
+  <tr>
+    <th>9</th>
+    <th>th</th>
+    <th>Grade</th>
+    <th>-</th>
+    <th>10</th>
+    <th>th</th>
+    <th>grade</th>
+    <th>-</th>
+    <th>11</th>
+    <th>th</th>
+    <th>Grade</th>
+    <th>-</th>
+    <th>12</th>
+    <th>th</th>
+    <th>grade</th>
+  </tr>
+  <tr>
+    <th>TRI 1</th>
+    <th>TRI 2</th>
+    <th>TRI 3</th>
+    <th>-</th>
+    <th>TRI 1</th>
+    <th>TRI 2</th>
+    <th>TRI 3</th>
+    <th>-</th>
+    <th>TRI 1</th>
+    <th>TRI 2</th>
+    <th>TRI 3</th>
+    <th>-</th>
+    <th>TRI 1</th>
+    <th>TRI 2</th>
+    <th>TRI 3</th>
+  </tr>
+  <tr>
+    <td>Int. 1 a</td>
+    <td>Int. 1 b</td>
+    <td>Int. 2 a</td>
+    <td>-></td>
+    <td>Int. 2 b</td>
+    <td>Int 3 a</td>
+    <td>Int 3 b</td>
+    <td>-></td>
+    <td>AFA 1</td>
+    <td>AFA 2</td>
+    <td>Pre-Calc 1</td>
+    <td>-></td>
+    <td>APStats 1/APCalc AB</td>
+    <td>APStats 2/APCalc AB</td>
+    <td>Stats/Pre-Calc 1</td>
+  </tr>
+</table>
+<br>
+<table class="center">
+  <tr>
+    <th>9</th>
+    <th>th</th>
+    <th>Grade</th>
+    <th>-</th>
+    <th>10</th>
+    <th>th</th>
+    <th>grade</th>
+    <th>-</th>
+    <th>11</th>
+    <th>th</th>
+    <th>Grade</th>
+    <th>-</th>
+    <th>12</th>
+    <th>th</th>
+    <th>grade</th>
+  </tr>
+  <tr>
+    <th>TRI 1</th>
+    <th>TRI 2</th>
+    <th>TRI 3</th>
+    <th>-</th>
+    <th>TRI 1</th>
+    <th>TRI 2</th>
+    <th>TRI 3</th>
+    <th>-</th>
+    <th>TRI 1</th>
+    <th>TRI 2</th>
+    <th>TRI 3</th>
+    <th>-</th>
+    <th>TRI 1</th>
+    <th>TRI 2</th>
+    <th>TRI 3</th>
+  </tr>
+  <tr>
+    <td>Int. 2 a</td>
+    <td>Int. 2 b</td>
+    <td>Trig</td>
+    <td>-></td>
+    <td>Int. 3 a</td>
+    <td>Int 3 b</td>
+    <td>Pre-Calc 1</td>
+    <td>-></td>
+    <td>APCalc AB</td>
+    <td>APCalc AB</td>
+    <td>Pre-Calc 2</td>
+    <td>-></td>
+    <td>Bridge to BC</td>
+    <td>AP Calc BC</td>
+    <td>AP Calc BC</td>
+  </tr>
+</table>
+<br>
+<body>
+<input type="text" placeholder="Do you want to print this page?" id="wish">
+<script>
+  function cond(){
+    var a=document.getElementById("wish").value;
+    if(a=="yes"){
+      print("Print");
+    }
+    else if(a=="no"){
+      document.write("Click back to return to homepage");
+    }
+    else{
+      print("Print")
+    }
+  }
+</script>
+<button type="button" onclick="cond()">Submit</button>
+
+</body>
+<style>
+  table, td, th {
+    border: 1px solid whitesmoke;
+  }
+  table {
+    border-collapse: collapse;
+    width: 80%;
+  }
+  th {
+    height: 70px;
+  }
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  body {
+    background: #0e440e;
+  }
+  body {
+    color: #051460;
+  }
+</style>
+{% endblock %}
+
+</html>
