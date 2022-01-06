@@ -1,11 +1,12 @@
 {% extends "layouts/base.html" %}
 
 {% block body %}
-<body>
+<body class="center">
+
 <h2>Find Your Counselor!</h2>
-<h4>Type the first letter of your last name to determine who your counselor is. (Uppercase Letter only)</h4>
+<h5>Type the FIRST LETTER of your last name to determine who your counselor is. (Uppercase Letter only)</h5>
 <form action="councelorsearch.html">
-    <label for="lname">Last name:</label> <br>
+    <label for="lname">Last Name:</label> <br>
     <input type="text" id="lname" name="lname" value=""> <br>
     <input type="submit" value="Submit" onclick="searchname()">
 </form>
@@ -15,5 +16,15 @@
     }
 
 </script>
+
+<style>
+    body,html,
+    body {
+    color: whitesmoke;
+    }
+    .center {
+        text-align: center;
+    }
+</style>
 </body>
 {% endblock %}
