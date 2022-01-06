@@ -101,6 +101,10 @@ def paige():
 def clubs():
     return render_template("clubpage.html")
 
+@app.route('/math/')
+def math():
+    return render_template("math.html")
+
 @app.route('/homepage/')
 def homepage():
     return render_template("homepage.html")
@@ -114,6 +118,9 @@ def aboutus():
 def sportspage():
     return render_template("sportspage.html")
 
+@app.route('/comment/')
+def comment():
+    return render_template("comment.html")
 
 @app.route('/councelorsearch/')
 def councelorsearch():
