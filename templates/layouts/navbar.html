@@ -18,14 +18,17 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <a class="nav-link" href={{ url_for('clubs') }}>CLUBS</a>
             <a class="nav-link" href={{ url_for('homepage') }}>HOME PAGE</a>
             <a class="nav-link" href={{ url_for('math') }}>Math PATH</a>
+            <a class="nav-link" href={{ url_for('Math_Path') }}>Club PATH</a>
             <a class="nav-link" href={{ url_for('comment') }}>Comments</a>
         </div>
+    </div>
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     About Us
                     <!-- reformatted website with new drop down and switched game and index -->
                 </a>
+            </li>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <a class="dropdown-item" href={{ url_for('bria') }}>Bria</a>
                     <a class="dropdown-item" href={{ url_for('jessie') }}>Jessie</a>
