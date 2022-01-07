@@ -126,9 +126,14 @@ def comment():
 def councelorsearch():
     return render_template("councelorsearch.html")
 
+@app.route('/JessieAboutMe/')
+def JessieAboutMe():
+    return render_template("JessieAboutMe.html")
+
 @app.route('/Math_Path/')
 def Math_Path():
     return render_template("Math_Path.html")
+
 
 
 
