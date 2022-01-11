@@ -6,6 +6,7 @@ Description of our project and its purpose
 ***
 ### Contributors
 |Contributor|Github ID/Profile|Assigned Tasks|Commits|Pair Journal|
+
 |------|---------------------------|-----|--------|-----------------------------------|
 |Bria|[B-G101](https://github.com/B-G101)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Ab_g101)|[Commits](https://github.com/B-G101/4Gs/commits?author=B-G101)|[Bria and Jessie Journal](https://docs.google.com/document/d/1u6FFdRtdQ9SN0laWD_i7epVdj3GMWEwbYvWhkXnosMc/edit#)|
 |Nadira|[nadirahaddach](https://github.com/nadirahaddach)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Anadira)|[Commits](https://github.com/B-G101/4Gs/commits?author=nadirahaddach)|[Nadira and Paige Journal](https://docs.google.com/document/d/1huWsfI7-3COuK45SiUF5_T3DFpNmcoGLhiiLbFigpsU/edit)|
@@ -21,6 +22,7 @@ Description of our project and its purpose
 ---
 ## Week 3: WIP Project Review
 |Assigned Role|Person Assigned|Tasks for the Week|Commits/Evidence of Completion|
+
 |--------------------------------------------------|----------------------------------------------|----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 |Scrum Master|Nadira|overview of progress using GitHub README, Tickets (Completed and Backlog), and Wiki.  Show expected backlog when returning from Winter Break.|1. [sports page](https://github.com/B-G101/4Gs/commit/5f3e86b9ae061846197546384c9726a89bc901f9)<br> 2. [extends base](https://github.com/B-G101/4Gs/commit/a2e60a89d4bf3a22dc099d4559fc2ca622027b2e) <br> 3. [Project Description](https://github.com/B-G101/4Gs/wiki/Project-Description:)||
 |GitHub Admin|Bria|highlighting issue, commits, and pull requests completed by each individual.|1. [link to commits](https://github.com/B-G101/4Gs/commits/main)<br> |
@@ -33,6 +35,7 @@ Description of our project and its purpose
 
 ## Week 2: Home Pages
 |Assigned Role|Person Assigned|Tasks for the Week|Commits/Evidence of Completion|
+
 |--------------------------------------------------|----------------------------------------------|----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 |Scrum Master|Nadira|About Me Page|1. [nadira.html](https://github.com/B-G101/4Gs/commit/c84310234ab4680d351c637ceba3c093760c3417)<br> 2. [Scrum Board Policies](https://github.com/B-G101/4Gs/wiki/Documentation-Policies:) <br> 3. [Project Description](https://github.com/B-G101/4Gs/wiki/Project-Description:)||
 |GitHub Admin|Bria|About Me Page|1. [made bria about me consistant with the design standards](https://github.com/B-G101/4Gs/commit/db01be684899a2a86b727f92b3e57088966b9c7a)<br> |
@@ -43,6 +46,7 @@ Description of our project and its purpose
 ---
 ## Week 1: Project Approval
 |Assigned Role|Person Assigned|Tasks for the Week|Commits/Evidence of Completion|
+
 |--------------------------------------------------|----------------------------------------------|----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 |Scrum Master|Nadira|About Me Page, Scrum Board Policies, Ideas for Technicals|1. [nadira.html](https://github.com/B-G101/4Gs/commit/c84310234ab4680d351c637ceba3c093760c3417)<br> 2. [Scrum Board Policies](https://github.com/B-G101/4Gs/wiki/Documentation-Policies:) <br> 3. [Project Description](https://github.com/B-G101/4Gs/wiki/Project-Description:)||
 |GitHub Admin|Bria|About Me Page, Github Policies, Ideas for Technicals|1. [updated my about me page](https://github.com/B-G101/4Gs/commit/771906bbbe9135f14c2c058b99074c0bc5940f4a) <br> 2. [GitHub Policies and Contributing Guidelines](https://github.com/B-G101/4Gs/wiki/GitHub-Policies-and-Contributing-Guidelines)<br>|
@@ -53,6 +57,7 @@ Description of our project and its purpose
 ---
 ## Week 0: Organize and Design
 |Assigned Role|Person Assigned|Tasks for the Week|Commits/Evidence of Completion|
+
 |--------------------------------------------------|----------------------------------------------|----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 |Scrum Master|Nadira|About Me Page, Scrum Board Policies|1. [navbar dropdown](https://github.com/B-G101/4Gs/commit/f28ae1f8c6511d84677319c4ca0696b0b1eb7b92)<br> 2. [about me page](https://github.com/B-G101/4Gs/commit/ac4cf09434952363d6da2ab76a9babe7c5a83485)<br> 3. [Scrum Board Policies](https://github.com/B-G101/4Gs/wiki/Documentation-Policies:) <br> 4. [Project Description](https://github.com/B-G101/4Gs/wiki/Project-Description:)|
 |GitHub Admin|Bria|About Me Page, Github Policies|1. [updated base and changed bria about me page](https://github.com/B-G101/4Gs/commit/c19a607c5768e718935180c85b1466530087e956) <br> 2. [change formatting of static a little bit, added api to my page, added the mask on mask off feature](https://github.com/B-G101/4Gs/commit/aee3e344a21f4b6175209e1fda5c3145515b530b) <br> 3. [finished api and fixed formatting on my about me page](https://github.com/B-G101/4Gs/commit/4372ef7a40f79034b8f86172ead53e2da4ba6988) <br> 4. [GitHub Policies and Contributing Guidelines](https://github.com/B-G101/4Gs/wiki/GitHub-Policies-and-Contributing-Guidelines)<br>|
