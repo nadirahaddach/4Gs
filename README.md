@@ -14,6 +14,7 @@ Description of our project and its purpose
 |Jessie|[parkjessie](https://github.com/parkjessie)|[Tasks](https://github.com/B-G101/4Gs/projects/1?card_filter_query=assignee%3Ajessie)|[Commits](https://github.com/B-G101/4Gs/commits?author=parkjessie)|[Bria and Jessie Journal](https://docs.google.com/document/d/1u6FFdRtdQ9SN0laWD_i7epVdj3GMWEwbYvWhkXnosMc/edit#)|
 ***
 ### Table of Contents
+
 1. [Week 0](https://github.com/B-G101/4Gs/blob/main/README.md#week-0-organize-and-design)
 2. [Week 1](https://github.com/B-G101/4Gs/blob/main/README.md#week-1-project-approval)
 3. [Week 2](https://github.com/B-G101/4Gs/blob/main/README.md#week-2-home-pages)
