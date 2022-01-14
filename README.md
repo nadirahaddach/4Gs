@@ -19,7 +19,7 @@ Description of our project and its purpose
 2. [Week 1](https://github.com/B-G101/4Gs/blob/main/README.md#week-1-project-approval)
 3. [Week 2](https://github.com/B-G101/4Gs/blob/main/README.md#week-2-home-pages)
 4. [Week 3](https://github.com/B-G101/4Gs/blob/main/README.md#week-3-wip-project-review)
-5. [Week 4](https://github.com/B-G101/4Gs/blob/main/README.md#week-3-wip-project-review)
+5. [Week 4](https://github.com/nadirahaddach/4Gs/blob/main/README.md#week-4-project-review)
 ---
 ## Week 4: Project Review
 
