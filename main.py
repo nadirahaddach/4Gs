@@ -1,13 +1,14 @@
 # import "packages" from flask
 from flask import render_template, request
+from __init__ import app
+
 import requests
 from templates.aboutus.briaapi import eightball
-from crud.app_crud import app_crud
-from __init__ import app
+
+
 
 
 # create a Flask instance
-app.register_blueprint(app_crud)
 
 # connects default URL to render index.html
 @app.route('/')
