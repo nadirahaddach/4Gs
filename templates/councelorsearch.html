@@ -7,6 +7,9 @@
 <h5>Type the FIRST LETTER of your last name to determine who your counselor is. (Lowercase Letter Only)</h5>
 
 <h5 id="coun"></h5>
+<br>
+<br>
+<br>
 <h5 id="kih">Mrs. Susie Kihneman</h5>
 <h5 id="rot">Mr. Tim Roty</h5>
 <h5 id="ken">Ms. Lauren Kennedy</h5>
@@ -15,10 +18,19 @@
 
 <form action="/councelorsearch">
     <label for="lname">Last Name:</label> <br>
-    <input type="text" id="lname" name="lname" value=""> <br>
-    <input type="submit" value="Submit" onclick="ascii()">
+    <input type="text" id="lname" name="lname"> <br>
+    <input type="submit" value="Submit" onclick="search()">
 </form>
 <script>
+    const lname = document.getElementById('lname').innerText
+    let w = lname.charCodeAt(0)
+    if (61<= w <= 64) {
+        document.getElementById("coun").innerHTML = "Mrs. Susie Kihneman";
+        }
+    else {
+        document.getElementById("coun").innerHTML = "yo"
+    }
+}
 
     function ascii(lname){
         lname = document.getElementById("lname").innerHTML
