@@ -19,6 +19,17 @@ Description of our project and its purpose
 2. [Week 1](https://github.com/B-G101/4Gs/blob/main/README.md#week-1-project-approval)
 3. [Week 2](https://github.com/B-G101/4Gs/blob/main/README.md#week-2-home-pages)
 4. [Week 3](https://github.com/B-G101/4Gs/blob/main/README.md#week-3-wip-project-review)
+5. [Week 4](https://github.com/nadirahaddach/4Gs/blob/main/README.md#week-4-project-review)
+---
+## Week 4: Project Review
+
+|Assigned Role|Person Assigned|Tasks for the Week|Commits/Evidence of Completion|
+|--------------------------------------------------|----------------------------------------------|----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+|Scrum Master|Nadira||1. []()<br> 2. []() <br> 3. []()||
+|GitHub Admin|Bria||1. []()<br> |
+|Primary Designer|Paige||1. []()<br> 2. [](<br> 3. [)<br>|
+|Deployment Manager|Jessie||1. []()<br> 2. []()<br> 3. [Service Config]()<br> 4. []() <br>|
+|Technical Officer|Bria|| 1. []()|
 
 ---
 ## Week 3: WIP Project Review

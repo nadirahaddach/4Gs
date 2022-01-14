@@ -122,8 +122,13 @@ def sportspage():
 def comment():
     return render_template("comment.html")
 
-@app.route('/councelorsearch/')
+@app.route('/councelorsearch/', methods=['GET', 'POST'])
 def councelorsearch():
+    if request.form:
+        input = request.form.get("lname")
+        print("works")
+        if len("input") != 0:
+            return render_template("councelorsearch.html", input=input)
     return render_template("councelorsearch.html")
 
 @app.route('/JessieAboutMe/')

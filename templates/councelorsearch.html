@@ -1,73 +1,63 @@
 {% extends "layouts/base.html" %}
 
 {% block body %}
-<body class="center">
+    <body class="center">
+    <br>
+    <h2>Find Your Counselor!</h2>
+    <h5>Type your last name to find your counselor!</h5>
 
-<h2>Find Your Counselor!</h2>
-<h5>Type the FIRST LETTER of your last name to determine who your counselor is. (Lowercase Letter Only)</h5>
+    <form method="POST" action="/councelorsearch/">
+        <input type="text" id="lname" name="lname">
+        <input type="submit" value="Submit" onclick="compare({{ input }})">
+    </form>
+    <br>
+    <h4>Your counselor is: </h4><h3 id="counselor"></h3>
 
-<h5 id="coun"></h5>
-<br>
-<br>
-<br>
-<h5 id="kih">Mrs. Susie Kihneman</h5>
-<h5 id="rot">Mr. Tim Roty</h5>
-<h5 id="ken">Ms. Lauren Kennedy</h5>
-<h5 id="lun">Mr. Jesse Luna</h5>
-<h5 id="mar">Mrs. Kathy Marron</h5>
+    <script>
+        const input = '{{ input }}';
+        let name = input.toUpperCase()
 
-<form action="/councelorsearch">
-    <label for="lname">Last Name:</label> <br>
-    <input type="text" id="lname" name="lname"> <br>
-    <input type="submit" value="Submit" onclick="search()">
-</form>
-<script>
-    const lname = document.getElementById('lname').innerText
-    let w = lname.charCodeAt(0)
-    if (61<= w <= 64) {
-        document.getElementById("coun").innerHTML = "Mrs. Susie Kihneman";
+        const char1 = name.charCodeAt(0);
+        let char2;
+        let char3;
+
+        <!-- we dont need to check if the first character is there bec the python does that -->
+
+        if (name.charCodeAt(1).isNaN) {    <!-- if the second character is non existant -->
+            char2 = 0
+        } else {
+            char2 = name.charCodeAt(1)
         }
-    else {
-        document.getElementById("coun").innerHTML = "yo"
-    }
-}
 
-    function ascii(lname){
-        lname = document.getElementById("lname").innerHTML
-        ascii = lname.charCodeAt(0);
-
-        if (ascii() < 69) {
-            document.getElementById('coun').innerHTML = "Mrs. Susie Kihneman";
+        if (name.charCodeAt(2).isNaN) {    <!-- if the third character is non existant -->
+            char3 = 0
+        } else {
+            char3 = name.charCodeAt(2)
         }
-        if (69<ascii<74) {
-            document.getElementById('coun').innerHTML = "Mr. Tim Roty";
+
+        <!-- uses decimal conversion of each letter one at a time to find where in the alphabet the last name is -->
+
+        if ((char1 < 68) || (char1 <= 68 && char2 < 69) || (char1 <= 68 && char2 <= 69 && char3 <= 76)) {
+            document.getElementById('counselor').innerHTML = "Mrs. Susie Kihneman";
+        } else if (char1 <= 74) {
+            document.getElementById('counselor').innerHTML = "Mr. Tim Roty";
+        } else if ((char1 < 77) || (char1 <= 77 && char2 <= 84)) {
+            document.getElementById('counselor').innerHTML = "Ms. Lauren Kennedy";
+        } else if ((char1 < 83) || (char1 <= 83 && char2 < 72) || (char1 <= 83 && char2 <= 72 && char3 <= 65)) {
+            document.getElementById('counselor').innerHTML = "Mr. Jesse Luna";
+        } else {
+            document.getElementById('counselor').innerHTML = "Mrs. Kathy Marron";
         }
-        if ( (lname))
-        {
-            document.getElementById('coun').innerHTML = "Ms. Lauren Kennedy";
+    </script>
 
+    <style>
+        body,html,
+        body {
+            color: whitesmoke;
         }
-        if ( (lname)>127)
-        {
-            document.getElementById('coun').innerHTML = "Mr. Jesse Luna<";
-
+        .center {
+            text-align: center;
         }
-        else {
-            document.getElementById('coun').innerHTML = "Mrs. Kathy Marron";
-
-        }}
-
-
-</script>
-
-<style>
-    body,html,
-    body {
-    color: whitesmoke;
-    }
-    .center {
-        text-align: center;
-    }
-</style>
-</body>
+    </style>
+    </body>
 {% endblock %}
