@@ -15,22 +15,6 @@ def index():
     return render_template("index.html")
 
 
-# connects /kangaroos path to render kangaroos.html
-@app.route('/kangaroos/')
-def kangaroos():
-    return render_template("kangaroos.html")
-
-
-@app.route('/walruses/')
-def walruses():
-    return render_template("walruses.html")
-
-
-@app.route('/hawkers/')
-def hawkers():
-    return render_template("hawkers.html")
-
-
 @app.route('/stub/')
 def stub():
     return render_template("stub.html")
@@ -60,7 +44,6 @@ def nadirasapi():
 def bria():
     return render_template("aboutus/bria.html")
 
-
 @app.route('/briasapi/', methods=['GET', 'POST'])
 def eightballapi():
     search = " "
@@ -79,6 +62,10 @@ def jessie():
     return render_template("aboutus/jessie.html")
 
 
+@app.route('/paige/')
+def paige():
+    return render_template("aboutus/paige.html")
+
 @app.route('/paigeapi/', methods=['GET', 'POST'])
 def population():
     url = "https://world-population.p.rapidapi.com/worldpopulation"
@@ -93,30 +80,20 @@ def population():
     return render_template("aboutus/paigeapi.html", stats=pop)
 
 
-@app.route('/paige/')
-def paige():
-    return render_template("aboutus/paige.html")
-
-@app.route('/clubs/')
-def clubs():
-    return render_template("clubpage.html")
-
 @app.route('/math/')
 def math():
     return render_template("math.html")
+
 
 @app.route('/homepage/')
 def homepage():
     return render_template("homepage.html")
 
 
-@app.route('/aboutus/')
-def aboutus():
-    return render_template("aboutus/aboutus.html")
-
 @app.route('/sportspage/')
 def sportspage():
     return render_template("sportspage.html")
+
 
 @app.route('/comment/')
 def comment():
@@ -131,13 +108,10 @@ def councelorsearch():
             return render_template("councelorsearch.html", input=input)
     return render_template("councelorsearch.html")
 
-@app.route('/JessieAboutMe/')
-def JessieAboutMe():
-    return render_template("JessieAboutMe.html")
 
-@app.route('/Math_Path/')
-def Math_Path():
-    return render_template("Math_Path.html")
+@app.route('/clubpage/')
+def clubpage():
+    return render_template("clubpage.html")
 
 
 
