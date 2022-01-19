@@ -76,6 +76,7 @@
                                 <th>Name</th>
                                 <th>Grade</th>
                                 <th>Advice</th>
+                                <th>Counselor</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -90,6 +91,7 @@
                                     <td>{{ row['name'] }}</td>
                                     <td>{{ row['grade'] }}</td>
                                     <td>{{ row['advice'] }}</td>
+                                    <td>{{ row['counselor'] }}</td>
                                 </tr>
                             {% endfor %}
                             </tbody>
@@ -111,6 +113,7 @@
                             <th><label for="name">Name</label></th>
                             <th><label for="grade">Grade</label></th>
                             <th><label for="advice">Advice</label></th>
+                            <th><label for="counselor">Counselor</label> </th>
                         </tr>
                         </thead>
                         <tbody>
@@ -118,6 +121,7 @@
                             <td><input type="text" name="name" id="name" required></td>
                             <td><input type="text" name="grade" pattern="[0-2|9]{0,2}" id="grade" required></td>
                             <td><input type="text" name="advice" id="advice" required></td>
+                            <td><input type="text" name="counselor" id="counselor" required></td>
                             <td><input type="submit" value="Create"></td>
                         </tr>
                         </tbody>
@@ -276,7 +280,7 @@
                         // loop through JSON and build HTML output
                         for (let i = 0; i < data.length; i++) {
                             const div = document.createElement("div");
-                            div.innerHTML = data[i].name + ' ' + data[i].email;
+                            div.innerHTML = data[i].name + ' ' + data[i].advice;
                             resultContainer.appendChild(div);
                         }
                     })

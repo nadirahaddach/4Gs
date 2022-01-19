@@ -3,7 +3,7 @@ from flask import Blueprint, render_template, request, url_for, redirect, jsonif
 from flask_restful import Api, Resource
 import requests
 
-from model import Users
+from model import Comments
 
 # blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects
 app_crud = Blueprint('crud', __name__,
@@ -27,22 +27,22 @@ api = Api(app_crud)
 
 
 # User/Users extraction from SQL
-def users_all():
+def comments_all():
     """converts Users table into JSON list """
-    return [peep.read() for peep in Users.query.all()]
+    return [peep.read() for peep in Comments.query.all()]
 
 
-def users_ilike(term):
+def comments_ilike(term):
     """filter Users table by term into JSON list """
     term = "%{}%".format(term)  # "ilike" is case insensitive and requires wrapped  %term%
-    table = Users.query.filter((Users.name.ilike(term)))
+    table = Comments.query.filter((Comments.name.ilike(term)))
     return [peep.read() for peep in table]
 
 
 # User extraction from SQL
-def user_by_id(userid):
+def comment_by_id(commentid):
     """finds User in table matching userid """
-    return Users.query.filter_by(userID=userid).first()
+    return Comments.query.filter_by(commentID=commentid).first()
 
 
 # User extraction from SQL
@@ -55,7 +55,7 @@ def user_by_id(userid):
 @app_crud.route('/')
 def crud():
     """obtains all Users from table and loads Admin Form"""
-    return render_template("crud.html", table=users_all())
+    return render_template("crud.html", table=comments_all())
 
 
 # CRUD create/add
@@ -63,11 +63,11 @@ def crud():
 def create():
     """gets data from form and add it to Users table"""
     if request.form:
-        po = Users(
+        po = Comments (
             request.form.get("name"),
+            request.form.get("date"),
             request.form.get("grade"),
-            request.form.get("advice"),
-            request.form.get("counselor")
+            request.form.get("comment")
         )
         po.create()
     return redirect(url_for('crud.crud'))
@@ -79,8 +79,8 @@ def read():
     """gets userid from form and obtains corresponding data from Users table"""
     table = []
     if request.form:
-        userid = request.form.get("userid")
-        po = user_by_id(userid)
+        commentid = request.form.get("commentid")
+        po = user_by_id(commentid)
         if po is not None:
             table = [po.read()]  # placed in list for easier/consistent use within HTML
     return render_template("crud.html", table=table)
@@ -91,7 +91,7 @@ def read():
 def update():
     """gets userid and name from form and filters and then data in  Users table"""
     if request.form:
-        userid = request.form.get("userid")
+        commentid = request.form.get("commentid")
         name = request.form.get("name")
         po = user_by_id(userid)
         if po is not None:
@@ -104,8 +104,8 @@ def update():
 def delete():
     """gets userid from form delete corresponding record from Users table"""
     if request.form:
-        userid = request.form.get("userid")
-        po = user_by_id(userid)
+        commentid = request.form.get("commentid")
+        po = user_by_id(commentid)
         if po is not None:
             po.delete()
     return redirect(url_for('crud.crud'))
@@ -124,18 +124,18 @@ def search_term():
     """ obtain term/search request """
     req = request.get_json()
     term = req['term']
-    response = make_response(jsonify(users_ilike(term)), 200)
+    response = make_response(jsonify(comments_ilike(term)), 200)
     return response
 
 
 """ API routes section """
 
 
-class UsersAPI:
+class CommentsAPI:
     # class for create/post
     class _Create(Resource):
-        def post(self, name, grade, advice, counselor):
-            po = Users(name, grade, advice, counselor)
+        def post(self, name, date, grade, comment):
+            po = Comments(name, date, grade, comment)
             person = po.create()
             if person:
                 return person.read()
@@ -144,12 +144,12 @@ class UsersAPI:
     # class for read/get
     class _Read(Resource):
         def get(self):
-            return users_all()
+            return comments_all()
 
     # class for read/get
     class _ReadILike(Resource):
         def get(self, term):
-            return users_ilike(term)
+            return comments_ilike(term)
 
     # class for update/put
     class _Update(Resource):
@@ -158,26 +158,26 @@ class UsersAPI:
             return po.read()
 
     class _UpdateAll(Resource):
-        def put(self, name, password, grade, advice, counselor):
-            po.update(name, password, grade, advice, counselor)
+        def put(self, name, date, grade, comment):
+            po.update(name, date, grade, comment)
             return po.read()
 
     # class for delete
     class _Delete(Resource):
-        def delete(self, userid):
-            po = user_by_id(userid)
+        def delete(self, commentid):
+            po = comment_by_id(commentid)
             if po is None:
-                return {'message': f"{userid} is not found"}, 210
+                return {'message': f"{commentid} is not found"}, 210
             data = po.read()
             po.delete()
             return data
 
     # building RESTapi resource
-    api.add_resource(_Create, '/create/<string:name>/<string:grade>/<string:advice>/<string:counselor>')
+    api.add_resource(_Create, '/create/<string:name>/<string:date>/<string:grade>/<string:comment>')
     api.add_resource(_Read, '/read/')
     api.add_resource(_ReadILike, '/read/ilike/<string:term>')
     api.add_resource(_Update, '/update/<string:name>')
-    api.add_resource(_UpdateAll, '/update/<string:name>/<string:grade>/<string:advice>/<string:counselor>')
+    api.add_resource(_UpdateAll, '/update/<string:name>/<string:date>/<string:grade>/<string:comment>')
     api.add_resource(_Delete, '/delete/<int:userid>')
 
 
@@ -229,8 +229,8 @@ def api_tester():
 def api_printer():
     print()
     print("Users table")
-    for user in users_all():
-        print(user)
+    for comment in comments_all():
+        print(comment)
 
 
 """validating api's requires server to be running"""
