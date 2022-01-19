@@ -85,11 +85,6 @@ def math():
     return render_template("math.html")
 
 
-@app.route('/homepage/')
-def homepage():
-    return render_template("homepage.html")
-
-
 @app.route('/sportspage/')
 def sportspage():
     return render_template("sportspage.html")
