@@ -28,12 +28,14 @@ class Users(db.Model):
     name = db.Column(db.String(255), unique=False, nullable=False)
     grade = db.Column(db.String(255), unique=False, nullable=False)
     advice = db.Column(db.String(255), unique=False, nullable=False)
+    counselor = db.Column(db.String(255), unique=False, nullable=False)
 
     # constructor of a User object, initializes of instance variables within object
-    def __init__(self, name, grade, advice):
+    def __init__(self, name, grade, advice, counselor):
         self.name = name
         self.grade = grade
         self.advice = advice
+        self.counselor = counselor
 
     # CRUD create/add a new record to the table
     # returns self or None on error
@@ -54,7 +56,8 @@ class Users(db.Model):
             "userID": self.userID,
             "name": self.name,
             "grade": self.grade,
-            "advice": self.advice
+            "advice": self.advice,
+            "counselor": self.counselor
         }
 
     # CRUD update: updates users name, password, grade
@@ -67,6 +70,8 @@ class Users(db.Model):
             self.grade = grade
         if len (advice) > 0:
             self.advice = advice
+        if len(counselor) > 0:
+            self.counselor = counselor
         db.session.commit()
         return self
 
@@ -87,14 +92,14 @@ def model_tester():
     print("--------------------------")
     db.create_all()
     """Tester data for table"""
-    u1 = Users(name='Thomas Edison', grade="12", advice='hello')
-    u2 = Users(name='Nicholas Tesla', grade="1111112222", advice='hhello')
-    u3 = Users(name='Alexander Graham Bell', grade="1111113333", advice='chello')
-    u4 = Users(name='Eli Whitney', grade="1111114444", advice='shello')
-    u5 = Users(name='John Mortensen', grade="8587754956", advice='dhello')
-    u6 = Users(name='John Mortensen', grade="8587754956", advice='dhello')
+    u1 = Users(name='Thomas Edison', grade="12", advice='hello', counselor='')
+    u2 = Users(name='Nicholas Tesla', grade="11", advice='hhello', counselor='')
+    u3 = Users(name='Alexander Graham Bell', grade="09", advice='chello', counselor='')
+    u4 = Users(name='Eli Whitney', grade="10", advice='shello', counselor='')
+    u5 = Users(name='John Mortensen', grade="11", advice='dhello', counselor='')
+    u6 = Users(name='John Mortensen', grade="12", advice='dhello', counselor='')
     # U7 intended to fail as duplicate key
-    u7 = Users(name='John Mortensen', grade="8586791294", advice='dhello')
+    u7 = Users(name='John Mortensen', grade="11", advice='dhello', counselor='')
     table = [u1, u2, u3, u4, u5, u6, u7]
     for row in table:
         try:
