@@ -139,7 +139,9 @@ def JessieAboutMe():
 def Math_Path():
     return render_template("Math_Path.html")
 
-
+@app.route('/map2/')
+def map2():
+    return render_template("map2.html")
 
 
 # runs the application on the development server

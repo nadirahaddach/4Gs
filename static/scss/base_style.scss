@@ -42,6 +42,7 @@ $theme-colors: (
 */
 
 // redefine colors
+$primary: #00008B
 $secondary: #5B9D82;
 $body-bg: #cfd8dc;
 
@@ -54,33 +55,33 @@ html, body {
   background-color: var(--bs-body-bg);
 }
 
-// setup dark mode styling
-.dark-mode {
-  $enable-gradients: true;
-
-  /* redefine body background */
-  $body-bg: #455a64;
-  /* set background values */
-  --#{$variable-prefix}body-bg: #{$body-bg};
-
-  /* redefine theme colors */
-  $primary: $purple;
-  $secondary: $green-600;
-
-  $theme-colors: (
-          "primary": $primary,
-          "secondary": $secondary
-  );
-  /* redefine theme color variables */
-  @each $color, $value in $theme-colors {
-    --#{$variable-prefix}#{$color}: #{$value};
-  }
-  /* redefine theme theme-colors-rgb variables */
-  $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
-  @each $color, $value in $theme-colors-rgb {
-    --#{$variable-prefix}#{$color}-rgb: #{$value};
-  }
-
-  @import "../../node_modules/bootstrap/scss/bootstrap";
-}
+//setup dark mode styling
+//.dark-mode {
+//  $enable-gradients: true;
+//
+//  /* redefine body background */
+//  $body-bg: #455a64;
+//  /* set background values */
+//  --#{$variable-prefix}body-bg: #{$body-bg};
+//
+//  /* redefine theme colors */
+//  $primary: $purple;
+//  $secondary: $green-600;
+//
+//  $theme-colors: (
+//          "primary": $primary,
+//          "secondary": $secondary
+//  );
+//  /* redefine theme color variables */
+//  @each $color, $value in $theme-colors {
+//    --#{$variable-prefix}#{$color}: #{$value};
+//  }
+//  /* redefine theme theme-colors-rgb variables */
+//  $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+//  @each $color, $value in $theme-colors-rgb {
+//    --#{$variable-prefix}#{$color}-rgb: #{$value};
+//  }
+//
+//  @import "../../node_modules/bootstrap/scss/bootstrap";
+//}
 

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+<html lang="en">
+
+
+{% block body %}
+    <body>
+
+    <div class="center">
+        <h2>Map to Del Norte</h2>
+    </div>
+
+    <br>
+    <body class="center">
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-pase5AparMC_AsscX5GaFIff1TJtYvI&callback=initMap"
+            type="text/javascript"></script>
+    <style>
+        #map {
+            border: solid #0e440e 5px;
+        }
+    </style>
+
+    <div align="center">
+        <div id="map" style="width: 800px; height: 600px;"></div>
+    </div>
+
+    <script type="text/javascript">
+        let locations = [
+            ['Del Norte', 33.01455630996583, -117.12090963966357],
+
+        ];
+        let map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: new google.maps.LatLng(33.01455630996583, -117.12090963966357),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+        let infowindow = new google.maps.InfoWindow();
+
+        let marker, i;
+        for (i = 0; i < locations.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map
+            });
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infowindow.setContent(locations[i][0]);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
+        }
+    </script>
+</body>
+<style>
+    table, td, th {
+        border: 1px solid whitesmoke;
+    }
+    table {
+        border-collapse: collapse;
+        width: 80%;
+    }
+    th {
+        height: 70px;
+    }
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    body {
+        background: #051460;
+    }
+    body {
+        color: #ffffff;
+    }
+</style>
+{% endblock %}
+
+</html>
