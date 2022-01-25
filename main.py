@@ -80,8 +80,8 @@ def population():
     return render_template("aboutus/paigeapi.html", stats=pop)
 
 
-@app.route('/math/')
-def math():
+@app.route('/mathpage/')
+def mathpage():
     return render_template("math.html")
 
 
