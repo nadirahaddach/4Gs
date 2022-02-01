@@ -4,19 +4,26 @@
 {% extends "layouts/base.html" %}
 
 <!-- CONTENT (in <head>), content for this page -->
-{% block meta %}
+{% block body %}
     <title>Async CRUD page</title>
-    <script src={{  url_for("crud.static", filename="javascript/validation.js", version='101') }}></script>
+    <script src={{  url_for("crud_api.static", filename="javascript/validation.js", version='101') }}></script>
 
     <script>
         function create_User(){
             //Validate Password (must be 6-20 characters in len)
-            verifyPassword("click");
             const name = document.getElementById("name").value;
             const grade = document.getElementById("grade").value;
             const advice = document.getElementById("advice").value;
             const counselor = document.getElementById("counselor").value;
-            const tags = document.getElementById("tags").value;
+                function displayTags(){
+                    var ele = document.getElementsByName('tags')
+                    for(i = 0; i < ele.length; i++) {
+                        if (ele[i].checked) {
+                            return ele[i].value;
+                        }
+                    }
+                }
+            const tags = displayTags();
             const requestOptions = {
                 method: 'POST',
                 headers: {
@@ -69,7 +76,6 @@
                     option = document.createElement("option");
                     option.innerText = data['userID'];
                     optGrp.appendChild(option);
-                    document.getElementById("pswError").innerHTML ="";
                     document.getElementById("name").value="";
                     document.getElementById("grade").value="";
                     document.getElementById("advice").value="";
@@ -127,10 +133,10 @@
         }
 
         function update_User() {
-            const username = document.getElementById("update_name").value;
+            const name = document.getElementById("update_name").value;
             const userid = document.getElementById("update_userid").value;
             //url for Update API
-            const url = '/crud_api/update/' + userid + '/' + username;
+            const url = '/crud_api/update/' + userid + '/' + name;
             const requestOptions = {
                 method: 'PUT',
                 headers: {
@@ -143,7 +149,6 @@
                 if (response.status !== 200) {
                     const errorMsg = 'Database response error: ' + response.status;
                     console.log(errorMsg);
-                    document.getElementById("pswError").innerHTML = errorMsg;
                     return;
                 }
                 // response contains valid result
@@ -155,9 +160,9 @@
                     let rows = table.querySelectorAll('tbody tr');
                     for(let i = 0; i < rows.length; ++i) {
                         //search for the required userid starting at row 0, column 0
-                        if (parseInt(rows[i].cells[0].innerHTML) == parseInt(userid)) {
+                        if (parseInt(rows[i].cells[0].innerHTML) === parseInt(userid)) {
                             //for the selected userid, update the username in column 1
-                            rows[i].cells[1].innerHTML = username;
+                            rows[i].cells[1].innerHTML = name;
                         }
                     }
                     //Another way of doing it is with jquery, in the table, find closest tr containing data and get td text
@@ -216,10 +221,8 @@
             })
         }
     </script>
-{% endblock %}
 
 <!-- CONTENT (in <body>), content for this page -->
-{% block body %}
     <div class="container py-4 text-light bg-success">
         <header class="pb-3 mb-4 border-bottom">
             <div class="d-flex align-items-center text-light text-decoration-none">
@@ -227,35 +230,74 @@
             </div>
         </header>
 
-        <div class="container py-4">
-            <div class="p-5 mb-4 bg-light text-dark rounded-3">
-                <h2>Table Viewer</h2>
-                <div class="row align-items-md-stretch">
-                    <table class="table">
-                        <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td><a href="https://github.com/nighthawkcoders/nighthawk_csp/tree/master/crud">GitHub Source</a></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="row align-items-md-stretch">
-                    <div class="container-fluid py-5">
-                        <table class="table" id="users">
-                            <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Grade</th>
-                                <th>Advice</th>
-                                <th>Counselor</th>
-                                <th>Tags</th>
-                            </tr>
-                            </thead>
-                            <tbody id="result">
-                            <!-- Loop through rows in table -->
+<div class="container overflow-hidden">
+     <div class="row">
+         <div class="col-3">
+             <div class="pl-3 border bg-light text-dark rounded 3">
+             <h3>Give your advice</h3>
+             <table class="table">
+                 <tbody>
+                 <tr>
+                     <td><label for="name">Name</label>
+                     <br>
+                     <input type="text" name="name" id="name" required></td>
+                 </tr>
+                 <tr>
+                     <td><label for="grade">Grade</label>
+                     <br>
+                     <input type="text" name="grade" pattern="[0-2|9]{0,2}" id="grade" required>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td><label for="advice">Advice</label>
+                     <br>
+                     <input type="text" name="advice" id="advice" required>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td><label for="counselor">Counselor</label>
+                     <br>
+                     <input type="text" name="counselor" id="counselor" required>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td>
+                     <label for="tags">Tags</label>
+                     <br>
+                     <input type="radio" name="tags" id="tags1" value="Work Habits" required>
+                         <label for="tags1">Work Habits</label>
+                         <input type="radio" name="tags" id="tags2" value="Friendships" required>
+                         <label for="tags2">Friendships</label> <br>
+                         <input type="radio" name="tags" id="tags3" value="Academics" required>
+                         <label for="tags3">Academics</label>
+                         <input type="radio" name="tags" id="tags3" value="General Advice" required>
+                         <label for="tags3">General Advice</label>
+
+                     </td>
+                 </tr>
+                 <tr>
+                     <td><button onclick="create_User()">Create</button> </td>
+                 </tr>
+                 </tbody>
+             </table>
+             </div>
+         </div>
+         <div class="col-9">
+             <div class="pr-0 border bg-light text-dark rounded 3">
+             <h3 class="pl-3">Find some advice</h3>
+             <table class="table" id="users">
+                 <thead>
+                 <tr>
+                     <th>ID</th>
+                     <th>Name</th>
+                     <th>Grade</th>
+                     <th>Advice</th>
+                     <th>Counselor</th>
+                     <th>Tags</th>
+                 </tr>
+                 </thead>
+                 <tbody id="result">
+                     <!-- Loop through rows in table -->
                             {% for row in table %}
                                 <!--
                                 Prepare table for display
@@ -270,52 +312,16 @@
                                     <td>{{ row['tags'] }}</td>
                                 </tr>
                             {% endfor %}
-                            </tbody>
-                        </table>
+                 </tbody>
+                 </table>
+             </div>
+         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="container py-4">
-            <div class="p-5 mb-4 bg-light text-dark rounded-3">
-                <h2>Create a new record</h2>
 
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th><label for="name">Name</label></th>
-                        <th><label for="grade">Grade</label></th>
-                        <th><label for="advice">Advice</label></th>
-                        <th><label for="counselor">Counselor</label> </th>
-                        <th><label for="tags">Tags</label></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td><input type="text" name="name" id="name" required></td>
-                        <td><input type="text" name="grade" pattern="[0-2|9]{0,2}" id="grade" required></td>
-                        <td><input type="text" name="advice" id="advice" required></td>
-                        <td><input type="text" name="counselor" id="counselor" required></td>
-                        <td><input type="radio" name="tags" id="tags1" value="School" required>
-                            <label for="tags1">School</label>
-                            <input type="radio" name="tags" id="tags2" value="Friendships" required>
-                            <label for="tags2">Friendships</label>
-                            <input type="radio" name="tags" id="tags3" value="Academics" required>
-                            <label for="tags3">Academics</label>
-                            <input type="radio" name="tags" id="tags3" value="General Advice" required>
-                            <label for="tags3">General Advice</label></td>
-                        <td><input type="submit" value="Create"></td>
-
-                    </tr>
-                    </tbody>
-                </table>
-                <p id="pswError"></p>
-            </div>
-        </div>
         <div class="container py-4">
             <div class="row mb-4 bg-light text-dark rounded-3">
                 <div class="col-md-3">
-                    <div class="p-5 mb-4 bg-light text-dark rounded-3">
+                    <div class="p-5 mb-4 bg-light text-dark rounded-3"> -->
                         <h2>Read</h2>
                         <!-- <input type="submit" value="Read" -->
                         <table id="read_table">
@@ -365,7 +371,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="p-5 mb-4 bg-light text-dark rounded-3">
+                    <div class="p-5 mb-4 bg-light text-dark rounded-3"> -->
                         <h2>Delete</h2>
                         <table id="read_table">
                             <tr><th><label for="delete_userid">ID</label></th></tr>
@@ -384,12 +390,8 @@
                         </table>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
+</div>
     </div>
-
-
 {% endblock %}

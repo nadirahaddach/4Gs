@@ -1,21 +1,18 @@
 """control dependencies to support CRUD routes and APIs"""
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request, url_for, redirect, jsonify, make_response
 from flask_restful import Api, Resource
 import requests
 
 from crud.sql import *
 
-# blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects
-
 app_crud_api = Blueprint('crud_api', __name__,
                          url_prefix='/crud_api',
-                         template_folder='templates/crud/',
+                         template_folder='templates',
                          static_folder='static',
                          static_url_path='static')
 
 # API generator https://flask-restful.readthedocs.io/en/latest/api.html#id1
 api = Api(app_crud_api)
-
 
 # Method #2 for CRUD
 @app_crud_api.route('/')
