@@ -4,76 +4,76 @@
 
 
 {% block body %}
-<body>
+    <body>
 
-<div class="center">
-    <h2>About Us</h2>
-    <h2>Paige McCartin</h2>
-    <p>Hi, my names Paige and I am the primary designer for our team. I play Varisty Girls Volleyball and participate in clubs such as Gardening for Change,
-        Link Crew, and NHS.</p>
-</div>
-<table class="center">
-    <tr>
-        <th>More Info</th>
-        <th>Links</th>
-    </tr>
-    <tr>
-        <td>I play for San Diego volleyball club. I have a sister who is a senior at Del Norte. My favorite color is purple. I have a goldendoodle named Cooper. I also have two cats named Beverly and Bentley.</td>
-        <td><a href="https://github.com/nadirahaddach/4Gs/wiki/Paige's-Journal">Paige Wiki Journal</a>
-            <a href="https://docs.google.com/presentation/d/1HYEDRN5f7PYX6Mmf6sWR_N41fWu1qG4b9oOvJjNwqx4/edit#slide=id.p">Wireframe</a>
-        </td>
-    </tr>
-</table>
-<br>
-    <body class="center">
-        <img src="/static/assets/paigemaskon.jpg" id="paigemaskon" alt=" Mask On" style="width: 400px; height: auto">
-        <input type="button" value="Take Mask Off" id="button1" onclick="changePhoto()">
+    <div class="center">
+        <h2>About Us</h2>
+        <h2>Paige McCartin</h2>
+        <p>Hi, my names Paige and I am the primary designer for our team. I play Varisty Girls Volleyball and participate in clubs such as Gardening for Change,
+            Link Crew, and NHS.</p>
+    </div>
+    <table class="center">
+        <tr>
+            <th>More Info</th>
+            <th>Links</th>
+        </tr>
+        <tr>
+            <td>I play for San Diego volleyball club. I have a sister who is a senior at Del Norte. My favorite color is purple. I have a goldendoodle named Cooper. I also have two cats named Beverly and Bentley.</td>
+            <td><a href="https://github.com/nadirahaddach/4Gs/wiki/Paige's-Journal">Paige Wiki Journal</a>
+                <a href="https://docs.google.com/presentation/d/1HYEDRN5f7PYX6Mmf6sWR_N41fWu1qG4b9oOvJjNwqx4/edit#slide=id.p">Wireframe</a>
+            </td>
+        </tr>
+    </table>
     <br>
-        <br>
-        <h3>What is the world population?</h3>
-        <a class="button" target="_blank" href="/paigeapi/">Click Here to Find Out!</a>
+    <body class="center">
+    <img src="/static/assets/paigemaskon.jpg" id="paigemaskon" alt=" Mask On" style="width: 400px; height: auto">
+    <input type="button" value="Take Mask Off" id="button1" onclick="changePhoto()">
+    <br>
+    <br>
+    <h3>What is the world population?</h3>
+    <a class="button" target="_blank" href="/paigeapi/">Click Here to Find Out!</a>
 
     </body>
     <script>
-    function changePhoto() {
-        if (document.getElementById("button1").value === "Take Mask Off") {
-            document.getElementById("paigemaskon").src = "/static/assets/paigemaskoff.jpg";
-            document.getElementById("button1").value = "Put Mask On";
+        function changePhoto() {
+            if (document.getElementById("button1").value === "Take Mask Off") {
+                document.getElementById("paigemaskon").src = "/static/assets/paigemaskoff.jpg";
+                document.getElementById("button1").value = "Put Mask On";
+            }
+            else{
+                document.getElementById("paigemaskon").src = "/static/assets/paigemaskon.jpg";
+                document.getElementById("button1").value = "Take Mask Off";
+            }
         }
-        else{
-            document.getElementById("paigemaskon").src = "/static/assets/paigemaskon.jpg";
-            document.getElementById("button1").value = "Take Mask Off";
-        }
-    }
     </script>
-</body>
-<style>
-    table, td, th {
-        border: 1px solid whitesmoke;
-    }
-    table {
-        border-collapse: collapse;
-        width: 80%;
-    }
-    th {
-        height: 70px;
-    }
-    .center {
-        margin-left: auto;
-        margin-right: auto;
-    }
+    </body>
+    <style>
+        table, td, th {
+            border: 1px solid whitesmoke;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th {
+            height: 70px;
+        }
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    .center {
-        text-align: center;
-    }
+        .center {
+            text-align: center;
+        }
 
-    body {
-        background: pink;
-    }
-    body {
-        color: deeppink;
-    }
-</style>
+        body {
+            background: pink;
+        }
+        body {
+            color: deeppink;
+        }
+    </style>
 {% endblock %}
 
 </html>

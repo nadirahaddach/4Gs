@@ -3,7 +3,7 @@ from flask import Blueprint, render_template, request, url_for, redirect, jsonif
 from flask_restful import Api, Resource
 import requests
 
-from crud.sql import *
+from crudy.sql import *
 
 app_crud_api = Blueprint('crud_api', __name__,
                          url_prefix='/crud_api',
