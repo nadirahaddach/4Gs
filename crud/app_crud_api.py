@@ -1,9 +1,9 @@
 """control dependencies to support CRUD routes and APIs"""
-from flask import Blueprint, render_template, request, url_for, redirect, jsonify, make_response
+from flask import Blueprint, render_template
 from flask_restful import Api, Resource
 import requests
 
-from crudy.sql import *
+from crud.sql import *
 
 app_crud_api = Blueprint('crud_api', __name__,
                          url_prefix='/crud_api',
