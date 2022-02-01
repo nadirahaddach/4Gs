@@ -172,22 +172,45 @@
   </tr>
 </table>
 <br>
+        <body class="center">
+        <br>
+        <br>
+        <h2>Find Your Math Class!</h2>
+        <h5>Type your current math class to find your next class!</h5>
+
+        <input type="text" placeholder="ex: Int. 2 B" id="wish">
+        <script>
+            function cond(){
+                var a=document.getElementById("wish").value;
+                if(a=="Math Accel"){
+                    document.getElementById("accel").innerHTML = "lol";
+                }
+                else if(a=="no"){
+                    document.write("Click back to return to homepage");
+                }
+                else document.getElementById("accel").innerHTML = "lol";
+            }
+        </script>
+        <div>
+        <button type="button" onclick="cond()">Submit</button>
+        <p id="accel"></p>
+        </div>
+        </body>
+
+
+        <style>
+            body,html,
+            body {
+                color: whitesmoke;
+            }
+            .center {
+                text-align: center;
+            }
+        </style>
+        </body>
 <body>
+<br>
 <input type="text" placeholder="Do you want to print this page?" id="wish">
-<script>
-  function cond(){
-    var a=document.getElementById("wish").value;
-    if(a=="yes"){
-      print("Print");
-    }
-    else if(a=="no"){
-      document.write("Click back to return to homepage");
-    }
-    else{
-      print("Print")
-    }
-  }
-</script>
 <button type="button" onclick="cond()">Submit</button>
 
 </body>
@@ -215,7 +238,7 @@
     background: #0e440e;
   }
   body {
-    color: #051460;
+    color: #ffffff;
   }
 </style>
 {% endblock %}
