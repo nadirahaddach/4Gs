@@ -2,12 +2,14 @@
 from flask import render_template, request
 import requests
 from templates.aboutus.briaapi import eightball
-from crud.app_crud import app_crud
+from crudy.app_crud import app_crud
+from crudy.app_crud_api import app_crud_api
 from __init__ import app
 
 
 # create a Flask instance
 app.register_blueprint(app_crud)
+app.register_blueprint(app_crud_api)
 
 # connects default URL to render index.html
 @app.route('/')

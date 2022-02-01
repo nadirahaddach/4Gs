@@ -33,5 +33,7 @@ def evenOdd(w):
                     prime = "The number is prime"
             print(prime)
 
-evenOdd(z)
+
+
+numbersGame(z)
 
