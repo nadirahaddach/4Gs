@@ -181,11 +181,11 @@
         <input type="text" placeholder="ex: Int. 2 B" id="wish">
         <script>
             function cond(){
-                var a=document.getElementById("wish").value;
-                if(a=="Math Accel"){
+                let a = document.getElementById("wish").value;
+                if(a === "Math Accel"){
                     document.getElementById("accel").innerHTML = "lol";
                 }
-                else if(a=="no"){
+                else if(a === "no"){
                     document.write("Click back to return to homepage");
                 }
                 else document.getElementById("accel").innerHTML = "lol";
