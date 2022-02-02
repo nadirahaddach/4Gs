@@ -8,25 +8,17 @@
 
 <div class="center">
   <h2>Math Paths</h2>
-  <p>Below are the different path of math a student could take. Look around to see what fits best for you.</p>
+  <p>Below are the different paths of math a student could take. Look around to see what fits best for you.</p>
 </div>
 <table class="center">
   <tr>
-    <th>9</th>
-    <th>th</th>
-    <th>Grade</th>
+    <th colspan="3">9th grade</th>
     <th>-</th>
-    <th>10</th>
-    <th>th</th>
-    <th>grade</th>
+    <th colspan="3">10th grade</th>
     <th>-</th>
-    <th>11</th>
-    <th>th</th>
-    <th>Grade</th>
+    <th colspan="3">11th grade</th>
     <th>-</th>
-    <th>12</th>
-    <th>th</th>
-    <th>grade</th>
+    <th colspan="3">12th grade</th>
   </tr>
   <tr>
     <th>TRI 1</th>
@@ -66,21 +58,13 @@
 <br>
 <table class="center">
   <tr>
-    <th>9</th>
-    <th>th</th>
-    <th>Grade</th>
+    <th colspan="3">9th grade</th>
     <th>-</th>
-    <th>10</th>
-    <th>th</th>
-    <th>grade</th>
+    <th colspan="3">10th grade</th>
     <th>-</th>
-    <th>11</th>
-    <th>th</th>
-    <th>Grade</th>
+    <th colspan="3">11th grade</th>
     <th>-</th>
-    <th>12</th>
-    <th>th</th>
-    <th>grade</th>
+    <th colspan="3">12th grade</th>
   </tr>
   <tr>
     <th>TRI 1</th>
@@ -119,23 +103,15 @@
 </table>
 <br>
 <table class="center">
-  <tr>
-    <th>9</th>
-    <th>th</th>
-    <th>Grade</th>
-    <th>-</th>
-    <th>10</th>
-    <th>th</th>
-    <th>grade</th>
-    <th>-</th>
-    <th>11</th>
-    <th>th</th>
-    <th>Grade</th>
-    <th>-</th>
-    <th>12</th>
-    <th>th</th>
-    <th>grade</th>
-  </tr>
+    <tr>
+        <th colspan="3">9th grade</th>
+        <th>-</th>
+        <th colspan="3">10th grade</th>
+        <th>-</th>
+        <th colspan="3">11th grade</th>
+        <th>-</th>
+        <th colspan="3">12th grade</th>
+    </tr>
   <tr>
     <th>TRI 1</th>
     <th>TRI 2</th>
@@ -181,11 +157,11 @@
         <input type="text" placeholder="ex: Int. 2 B" id="wish">
         <script>
             function cond(){
-                var a=document.getElementById("wish").value;
-                if(a=="Math Accel"){
+                let a = document.getElementById("wish").value;
+                if(a === "Math Accel"){
                     document.getElementById("accel").innerHTML = "lol";
                 }
-                else if(a=="no"){
+                else if(a === "no"){
                     document.write("Click back to return to homepage");
                 }
                 else document.getElementById("accel").innerHTML = "lol";
