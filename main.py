@@ -108,7 +108,7 @@ def councelorsearch():
 
 @app.route('/clubpage/')
 def clubpage():
-    return render_template("clubpage.html")
+    return render_template("clubpagecross.html")
 
 @app.route('/map2/')
 def map2():
