@@ -14,9 +14,15 @@
     {% set name = "4Gs coders" %}
     {% include "layouts/navbar.html" %}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: -webkit-gradient(linear, left top, left bottom, from(#ffc0cb), to(#800080)) fixed;
+        }
+    </style>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
         .mySlides {display:none;}
@@ -24,8 +30,10 @@
         .card {
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             transition: 0.3s;
-            width: 40%;
             border-radius: 5px;
+            justify-content: space-evenly;
+            margin-left: 10px;
+            margin-right: 10px;
         }
 
         .card:hover {
@@ -73,23 +81,28 @@
     }
 </script>
 
-    <div class="card">
-        <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/baby-blue-solid-color-marine-solid-colors.jpg" alt="Avatar" style="width:100%">
-        <div class="container">
-            <h4><b>Jane Doe</b></h4>
-            <p>Interior Designer</p>
+<body>
+    <div class="row" style="display: flex; justify-content: center">
+        <div class="col-sm-4 card">
+            <img src="https://ljhitide.net/wp-content/uploads/2019/03/LJHS-Speech-and-Debate-at-Del-Norte-High-01-26-19.jpg" style="width:100%">
+            <div class="container" >
+                <h4><b>Speech and Debate Club</b></h4>
+                <p>Meeting days:</p>
+                <p>Class #:</p>
+            </div>
         </div>
-    </div>
-    <div class="card">
-        <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/light-pink-solid-color-girly-pastel-solid-colors.jpg" alt="Avatar" style="width:100%">
-        <div class="container">
-            <h4><b>Jane Doe</b></h4>
-            <p>Interior Designer</p>
+        <div class="col-sm-4 card">
+            <img src="https://static.wixstatic.com/media/e66c85_5e2cb6f7452a49b498ad28dcc3340173~mv2_d_4032_3024_s_4_2.jpg" width="100%" height="100%">
+            <div class="container" >
+                <h4><b>Key Club</b></h4>
+                <p>Meeting days:</p>
+                <p>Class #:</p>
+            </div>
         </div>
     </div>
 
-</head>
-<body>
 
 </body>
+
+
 </html>
