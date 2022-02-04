@@ -3,8 +3,20 @@
 <html lang="en">
 
 
+
 {% block body %}
 <body>
+
+<script>
+
+    function cond(){
+        const classList = ["Math Accel", "Int. 1A", "Int 1B", "Int 2A", "Int 2B", "Trig", "Int. 3A", "Int. 3B", "AFA 1", "AFA 2", "Pre-Calc 1", "AP Calc AB 1", "AP Calc AB 2", "Pre-Calc 2", "AP Calc BC 1", "AP Calc BC 2", "AP Stats 1", "AP Stats 2", "AP Stats 3", "You're cracked at math", "Select a Class"]
+        const dropdownPick = parseInt(document.getElementById("input1").value);
+        document.getElementById("selection").innerHTML = classList[dropdownPick + 1];
+
+    }
+
+</script>
 
 <div class="center">
   <h2>Math Paths</h2>
@@ -148,54 +160,56 @@
   </tr>
 </table>
 <br>
+
         <body class="center">
         <br>
         <br>
         <h2>Find Your Math Class!</h2>
         <h5>Select your current math class to find your next class!</h5>
 
-        <select class="extra" id="wish">
-            <option value="20"></option>
-            <option value="1">Math Accel</option>
-            <option value="2">Int. 1A</option>
-            <option value="3">Int. 1B</option>
-            <option value="4">Int. 2A</option>
-            <option value="5">Int 2B</option>
-            <option value="6">Trig</option>
-            <option value="7">Int 3A</option>
-            <option value="8">Int 3B</option>
-            <option value="9">Pre-Calc 1</option>
-            <option value="10">Pre-Calc 2</option>
-            <option value="11">AFA 1</option>
-            <option value="12">AFA 2</option>
-            <option value="13">AP Calc AB 1</option>
-            <option value="14">AP Calc AB 2</option>
-            <option value="15">AP Calc BC 1</option>
-            <option value="16">AP Calc BC 2</option>
-            <option value="17">AP Stats 1</option>
-            <option value="18">AP Stats 2</option>
-            <option value="19">AP Stats 3</option>
+        <select class="extra" id="input1">
+            <option value="19"></option>
+            <option value="0">Math Accel</option>
+            <option value="1">Int. 1A</option>
+            <option value="2">Int. 1B</option>
+            <option value="3">Int. 2A</option>
+            <option value="4">Int. 2B</option>
+            <option value="5">Trig</option>
+            <option value="6">Int. 3A</option>
+            <option value="7">Int. 3B</option>
+            <option value="8">AFA 1</option>
+            <option value="9">AFA 2</option>
+            <option value="10">Pre-Calc 1</option>
+            <option value="11">AP Calc AB 1</option>
+            <option value="12">AP Calc AB 2</option>
+            <option value="13">Pre-Calc 2</option>
+            <option value="14">AP Calc BC 1</option>
+            <option value="15">AP Calc BC 2</option>
+            <option value="16">AP Stats 1</option>
+            <option value="17">AP Stats 2</option>
+            <option value="18">AP Stats 3</option>
         </select>
 
-        <script>
-            function cond(){
-                let a = document.getElementById("wish").input;
-                if(a === "Math Accel"){
-                    document.getElementById("accel").innerHTML = "";
-                }
-                else if(a === ""){
-                    document.getElementById("accel").innerHTML = "";
-                }
-                else if(a === "no"){
-                    document.write("Click back to return to homepage");
-                }
-                else document.getElementById("accel").innerHTML = "lol";
-            }
-        </script>
-        <div>
         <button type="button" onclick="cond()">Submit</button>
-        <p id="accel"></p>
-        </div>
+
+        <p id="selection" class="answer"> </p>
+
+{#        <script>#}
+{#            function cond(){#}
+{#                let a = document.getElementById("wish").value;#}
+{#                if(a === "1"){#}
+{#                    document.getElementById("accel").innerHTML = "";#}
+{#                }#}
+{#                else if(a === ""){#}
+{#                    document.getElementById("accel").innerHTML = "";#}
+{#                }#}
+{#                else if(a === "0"){#}
+{#                    document.write("Click back to return to homepage");#}
+{#                }#}
+{#                else document.getElementById("accel").innerHTML = "lol";#}
+{#            }#}
+{#        </script>#}
+
         </body>
 
 
