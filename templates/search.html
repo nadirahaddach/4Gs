@@ -39,6 +39,10 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
         </div>
     </div>
 
+    <div class="px-3">
+        <input id="search" type="search" placeholder="Search" aria-label="Search">
+    </div>
+
     <script>
         function search_data() {
             // fetch standard requires data set to a name-value pair
@@ -85,5 +89,22 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                     })
                 })
         }
+
+    const search = document.getElementById('search');
+    const google = 'https://www.google.com/search?q=site%3A+';
+    const site = 'http://4g-coders.cf/'; // deployment needs to be fixed for it to work
+
+    function submitted(event) {
+      if (event.key === 'Enter') {
+         event.preventDefault();
+         const url = google
+                     + site
+                     + '+'
+                     + search.value;
+                     const win = window.open(url, '_blank');
+                     win.focus();
+      }
+    }
+    search.addEventListener('keypress', submitted);
     </script>
 {% endblock %}
