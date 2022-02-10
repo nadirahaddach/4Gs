@@ -23,7 +23,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     CRUD
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <a class="nav-link" href={{ url_for('crud.crud') }}>CRUD</a>
+                    <a class="nav-link" href={{ url_for('crud_api.crud_api') }}>CRUD</a>
                     <a class="nav-link" href={{ url_for('crud.search') }}>SEARCH</a>
                 </div>
             </li>
@@ -41,5 +41,8 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             </li>
         </div>
     </div>
+        <input type="button" class="dark-mode" onclick="darkSwitch()" value="Dark Mode" id="darkSwitch"
+</nav>
+
 </nav>
 

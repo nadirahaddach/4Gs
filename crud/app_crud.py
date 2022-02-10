@@ -67,7 +67,8 @@ def create():
             request.form.get("name"),
             request.form.get("grade"),
             request.form.get("advice"),
-            request.form.get("counselor")
+            request.form.get("counselor"),
+            request.form.get("tags")
         )
         po.create()
     return redirect(url_for('crud.crud'))
@@ -134,8 +135,8 @@ def search_term():
 class UsersAPI:
     # class for create/post
     class _Create(Resource):
-        def post(self, name, grade, advice, counselor):
-            po = Users(name, grade, advice, counselor)
+        def post(self, name, grade, advice, counselor, tags):
+            po = Users(name, grade, advice, counselor, tags)
             person = po.create()
             if person:
                 return person.read()
@@ -158,8 +159,8 @@ class UsersAPI:
             return po.read()
 
     class _UpdateAll(Resource):
-        def put(self, name, password, grade, advice, counselor):
-            po.update(name, password, grade, advice, counselor)
+        def put(self, name, password, grade, advice, counselor, tags):
+            po.update(name, password, grade, advice, counselor, tags)
             return po.read()
 
     # class for delete
@@ -173,11 +174,11 @@ class UsersAPI:
             return data
 
     # building RESTapi resource
-    api.add_resource(_Create, '/create/<string:name>/<string:grade>/<string:advice>/<string:counselor>')
+    api.add_resource(_Create, '/create/<string:name>/<string:grade>/<string:advice>/<string:counselor>/<string:tags>')
     api.add_resource(_Read, '/read/')
     api.add_resource(_ReadILike, '/read/ilike/<string:term>')
     api.add_resource(_Update, '/update/<string:name>')
-    api.add_resource(_UpdateAll, '/update/<string:name>/<string:grade>/<string:advice>/<string:counselor>')
+    api.add_resource(_UpdateAll, '/update/<string:name>/<string:grade>/<string:advice>/<string:counselor>/<string:tags>')
     api.add_resource(_Delete, '/delete/<int:userid>')
 
 
