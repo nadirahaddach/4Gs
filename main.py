@@ -4,12 +4,15 @@ import requests
 from templates.aboutus.briaapi import eightball
 from crud.app_crud_api import app_crud_api
 from crud.app_crud import app_crud
+from map import app_map
 from __init__ import app
+import random, base64
 
 
 # create a Flask instance
 app.register_blueprint(app_crud_api)
 app.register_blueprint(app_crud)
+app.register_blueprint(app_map)
 
 # connects default URL to render index.html
 @app.route('/')
@@ -114,6 +117,17 @@ def clubpage():
 def map2():
     return render_template("map2.html")
 
+@app.route('/maptest/', methods=['GET','POST'])
+def maptest():
+    img_list = ["/static/assets/map/dnfield.png",
+                "/static/assets/map/dngym.png",
+                "/static/assets/map/dnoffice.png",
+                "/static/assets/map/dnpool.png",
+                "/static/assets/map/dnquad.png"]
+    img_choice = random.choice(img_list)
+    """"with open(img_choice, "rb") as img_file:
+        my_string = base64.b64encode(img_file.read())"""""
+    return render_template("maptest.html", htmlstring = img_choice)
 
 # runs the application on the development server
 if __name__ == "__main__":
