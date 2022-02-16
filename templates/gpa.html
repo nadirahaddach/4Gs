@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+<html lang="en">
+
+
+{% block body %}
+    <body>
+
+    <div class="center">
+        <h2>GPA Calculator</h2>
+        <h5> Fresman year</h5>
+        <p>Tri one - enter letter grade</p>
+
+    num = int(input('How many classes: '))
+    total_sum = 0
+    for n in range(num):
+            numbers = float(input('Enter grade % : '))
+            total_sum = numbers
+    avg = total_sum/num
+    print('Average of ', num, ' numbers is :', avg)
+
+
+
+    <style>
+        table, td, th {
+            border: 1px solid whitesmoke;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th {
+            height: 70px;
+        }
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        body {
+            background: #051460;
+        }
+        body {
+            color: #ffffff;
+        }
+    </style>
+{% endblock %}
+
+</html>

@@ -28,7 +28,7 @@
                         <tr>
                             <td></td>
                             <td></td>
-                            <td><a href={{url_for('crud.crud')}}>Full Table </a></td>
+                            <td><a href={{url_for('crud.crudtemp')}}>Full Table </a></td>
                             <td><a href="https://github.com/nighthawkcoders/nighthawk_csp/tree/master/crud">GitHub Source</a></td>
                         </tr>
                         </tbody>
@@ -162,10 +162,10 @@
                         <h2>Delete</h2>
                         <form method="POST" ID="read" action={{url_for('crud.delete')}} >
                             <table id="read_table">
-                                <tr><th><label for="delete_userid">ID</label></th></tr>
+                                <tr><th><label for="delete_Gpadataid">ID</label></th></tr>
                                 <tr>
                                     <td>
-                                        <select name="userid" id="delete_userid">
+                                        <select name="userid" id="delete_Gpadataid">
                                             <optgroup label="userid">
                                                 {% for row in table %}
                                                     <option label="{{ row['userID'] }}">{{ row['userID'] }}</option>
@@ -176,6 +176,7 @@
                                     <td><input type="submit" value="Delete"></td>
                                 </tr>
                             </table>
+                        <h2> Calculate your GPA!</h2>
                         </form>
                     </div>
                 </div>

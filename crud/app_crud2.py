@@ -11,7 +11,7 @@ app_crud = Blueprint('crud', __name__,
                      static_url_path='static')
 
 """ Application control for CRUD is main focus of this File, key features:
-    1.) User table queries
+    1.) Gpadata table queries
     2.) app routes for CRUD (Blueprint)
 """
 
@@ -19,74 +19,61 @@ app_crud = Blueprint('crud', __name__,
 # Default URL
 @app_crud.route('/')
 def crud():
-    """obtains all Users from table and loads Admin Form"""
-    return render_template("crud.html", table=users_all())
+    """obtains all Gpadatas from table and loads Admin Form"""
+    return render_template("crudtemp.html", table=Gpadatas_all())
 
 
 # CRUD create/add
 @app_crud.route('/create/', methods=["POST"])
 def create():
-    """gets data from form and add it to Users table"""
+    """gets data from form and add it to Gpadatas table"""
     if request.form:
-        po = Users(
+        po = Gpadatas(
             request.form.get("name"),
             request.form.get("grade"),
             request.form.get("gpa")
         )
         po.create()
-    return redirect(url_for('crud.crud'))
+    return redirect(url_for('crud.crudtemp'))
 
 
 # CRUD read
 @app_crud.route('/read/', methods=["POST"])
 def read():
-    """gets userid from form and obtains corresponding data from Users table"""
+    """gets Gpadataid from form and obtains corresponding data from Gpadatas table"""
     table = []
     if request.form:
-        userid = request.form.get("userid")
-        po = user_by_id(userid)
+        Gpadataid = request.form.get("Gpadataid")
+        po = Gpadata_by_id(Gpadataid)
         if po is not None:
             table = [po.read()]  # placed in list for easier/consistent use within HTML
-    return render_template("crud.html", table=table)
+    return render_template("crudtemp.html", table=table)
 
 
 # CRUD update
 @app_crud.route('/update/', methods=["POST"])
 def update():
-    """gets userid and name from form and filters and then data in  Users table"""
+    """gets Gpadataid and name from form and filters and then data in  Gpadatas table"""
     if request.form:
-        userid = request.form.get("userid")
+        Gpadataid = request.form.get("Gpadataid")
         name = request.form.get("name")
-        po = user_by_id(userid)
+        po = Gpadata_by_id(Gpadataid)
         if po is not None:
             po.update(name)
-    return redirect(url_for('crud.crud'))
+    return redirect(url_for('crud.crudtemp'))
 
 
 # CRUD delete
 @app_crud.route('/delete/', methods=["POST"])
 def delete():
-    """gets userid from form delete corresponding record from Users table"""
+    """gets Gpadataid from form delete corresponding record from Gpadatas table"""
     if request.form:
-        userid = request.form.get("userid")
-        po = user_by_id(userid)
+        Gpadataid = request.form.get("Gpadataid")
+        po = Gpadata_by_id(Gpadataid)
         if po is not None:
             po.delete()
-    return redirect(url_for('crud.crud'))
+    return redirect(url_for('crud.crudtemp'))
 
 
 # Search Form
-@app_crud.route('/search/')
-def search():
-    """loads form to search Users data"""
-    return render_template("search.html")
 
-
-# Search request and response
-@app_crud.route('/search/term/', methods=["POST"])
-def search_term():
-    """ obtain term/search request """
-    req = request.get_json()
-    term = req['term']
-    response = make_response(jsonify(users_ilike(term)), 200)
-    return response

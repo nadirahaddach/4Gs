@@ -114,6 +114,10 @@ def clubpage():
 def map2():
     return render_template("map2.html")
 
+@app.route('/gpa/')
+def gpa():
+    return render_template("gpa.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
