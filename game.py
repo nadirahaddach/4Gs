@@ -1,5 +1,4 @@
 import random
-z = int(input("Enter a number from 1-100"))
 
 
 
@@ -34,6 +33,14 @@ def evenOdd(w):
             print(prime)
 
 
+age1 = int(input("Type in an age"))
+age2 = int(input("Type in another age"))
+def swapNum(age1,age2):
+    if (age1 > age2):
+        temp = age1
+        age1 = age2
+        age2 = temp
+    else:
 
-numbersGame(z)
+    return(age1,age2)
 

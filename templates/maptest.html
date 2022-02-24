@@ -6,9 +6,44 @@
 <!-- CONTENT (in <head>), content for this page -->
 {% block body %}
     <body>
-    <p>From wikipedia</p>
-    <img src="{{ htmlstring }}" alt="Red dot" />
+    <img src="/static/assets/map/dndefault.png" alt="Map image" id="mapimage" onload="getrandomImg()"/>
+    <label for="myText">Guess the Location:</label><br>
+    <input type="text" id="myText" value="hello">
+    <button onclick="getGuess()">Submit Answer</button>
+    <button onclick="imgGame()">Check Answer</button>
+    <p id="endgamemessage"></p>
     </body>
+    <script>
+        const mapurl = [
+            "/static/assets/map/dnbasketball.png",
+            "/static/assets/map/dngym.png",
+            "/static/assets/map/dnpool.png",
+            "/static/assets/map/dnstadium.png",
+            "/static/assets/map/dntennis.png"];
+        mapimgnum = Math.floor(Math.random() * mapurl.length);
+        function getrandomImg() {
+            document.getElementById("mapimage").src = mapurl[mapimgnum];
+        }
+
+        mapnewlist = new Array([]);
+        function getGuess(){
+            return guess = document.getElementById("myText").value;
+        }
+        function imgGame(guess){
+            for (let i = 0; i < mapurl.length; i++) {
+                mapnewlist[i] = mapurl[i].slice(21,-4)
+            }
+            for (let j = 0; j < mapnewlist.length; j++) {
+                if (guess == mapnewlist[j] && j === mapimgnum) {
+                    document.getElementById("endgamemessage").innerHTML = "yay you win"
+                }
+                else {
+                    document.getElementById("endgamemessage").innerHTML = "aww you lose"
+                }
+            }
+        }
+
+    </script>
 
 {% endblock %}
 </html>
