@@ -5,7 +5,6 @@ from templates.aboutus.briaapi import eightball
 from crud.app_crud_api import app_crud_api
 from crud.app_crud import app_crud
 from __init__ import app
-import random, base64
 
 
 # create a Flask instance
@@ -114,6 +113,10 @@ def clubpage():
 @app.route('/map2/')
 def map2():
     return render_template("map2.html")
+
+@app.route('/gpa/')
+def gpa():
+    return render_template("gpa.html")
 
 @app.route('/maptest/')
 def maptest():
