@@ -10,7 +10,6 @@
     <label for="myText">Guess the Location:</label><br>
     <input type="text" id="myText" value="hello">
     <button onclick="getGuess()">Submit Answer</button>
-    <button onclick="imgGame()">Check Answer</button>
     <p id="endgamemessage"></p>
     </body>
     <script>
@@ -26,20 +25,22 @@
         }
 
         mapnewlist = new Array([]);
+
+        let guess;
+
         function getGuess(){
-            return guess = document.getElementById("myText").value;
+            guess = document.getElementById("myText").value;
+            imgGame();
         }
-        function imgGame(guess){
+        function imgGame(){
+            let guess2 = guess;
             for (let i = 0; i < mapurl.length; i++) {
                 mapnewlist[i] = mapurl[i].slice(21,-4)
             }
-            for (let j = 0; j < mapnewlist.length; j++) {
-                if (guess == mapnewlist[j] && j === mapimgnum) {
-                    document.getElementById("endgamemessage").innerHTML = "yay you win"
-                }
-                else {
-                    document.getElementById("endgamemessage").innerHTML = "aww you lose"
-                }
+            if (guess2 == mapnewlist[mapimgnum]) {
+                document.getElementById("endgamemessage").innerHTML = "yay you win";
+            }   else {
+                document.getElementById("endgamemessage").innerHTML = "aww you lose";
             }
         }
 
