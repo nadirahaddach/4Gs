@@ -6,42 +6,106 @@
 <!-- CONTENT (in <head>), content for this page -->
 {% block body %}
     <body>
-    <img src="/static/assets/map/dndefault.png" alt="Map image" id="mapimage" onload="getrandomImg()"/>
-    <label for="myText">Guess the Location:</label><br>
-    <input type="text" id="myText" value="hello">
-    <button onclick="getGuess()">Submit Answer</button>
-    <p id="endgamemessage"></p>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-auto bg-secondary text-white p-3">
+                <img src="/static/assets/map/dndefault.png" alt="Map image" id="mapimage" style="width: 688px; height: auto"/>
+            </div>
+
+            <div class="col col-lg-4 p-3 ">
+                <div class="alert alert-primary" role="alert">
+                    <h5>Del Norte GeoGuesser:</h5> <p>This game is designed to help new students learn the locations of Del Norte in a fun and easy to use manner!. </p>
+                </div>
+                <div class="btn-group btn-block pb-3 pt-2" role="group" aria-label="Choosing Difficulty">
+                    <button type="button" class="btn btn-secondary" id="easy" onclick="changeDifficulty(1)">Easy</button>
+                    <button type="button" class="btn btn-secondary" id="medium" onclick="changeDifficulty(2)">Medium</button>
+                    <button type="button" class="btn btn-secondary" id="hard" onclick="changeDifficulty(3)">Hard</button>
+                </div>
+
+                <label for="myText">Guess the Location:</label><br>
+                <input type="text" id="myText" placeholder="Type Here..." value="">
+                <button id="clickme" onclick="getGuess()">Submit Answer</button>
+                <br>
+                <br>
+                <h6 class="border border-primary" id="endgamemessage"></h6>
+                <p id="countDisplay">Counter</p>
+
+            </div>
+        </div>
+    </div>
     </body>
     <script>
-        const mapurl = [
-            "/static/assets/map/dnbasketball.png",
+        let mapurl;
+        let mapimgnum;
+        let h3 = document.getElementById("countDisplay");
+        let button = document.getElementById("clickme");
+        let count = -1;
+        let easy = [
+            "/static/assets/map/dnbasketball courts.png",
             "/static/assets/map/dngym.png",
             "/static/assets/map/dnpool.png",
             "/static/assets/map/dnstadium.png",
-            "/static/assets/map/dntennis.png"];
-        mapimgnum = Math.floor(Math.random() * mapurl.length);
+            "/static/assets/map/dntennis courts.png"];
+        let medium = [
+            "/static/assets/map/dncafeteria.png",
+            "/static/assets/map/dnlibrary.png",
+            "/static/assets/map/dnquad.png",
+            "/static/assets/map/dnoffice.png",
+            "/static/assets/map/dnlockers.png",
+            "/static/assets/map/dnpac.png"];
+        let hard = [
+            "/static/assets/map/dna building.png",
+            "/static/assets/map/dnd building.png",
+            "/static/assets/map/dne building.png",
+            "/static/assets/map/dng building.png",
+            "/static/assets/map/dnj building.png",
+            "/static/assets/map/dnk building.png",
+            "/static/assets/map/dnl building.png",
+            "/static/assets/map/dnp building.png"];
+        function changeDifficulty(difficulty){
+            let number = difficulty
+            if (number === 0) {
+                mapurl = easy
+            } else if (number === 1) {
+                mapurl = easy
+            } else if (number === 2) {
+                mapurl = medium
+            } else if (number === 3){
+                mapurl = hard
+            }
+            mapimgnum = Math.floor(Math.random() * mapurl.length);
+            getrandomImg();
+            getGuess();
+        }
         function getrandomImg() {
             document.getElementById("mapimage").src = mapurl[mapimgnum];
+            count = -1
         }
-
         mapnewlist = new Array([]);
 
-        let guess;
 
+
+        let guess;
         function getGuess(){
             guess = document.getElementById("myText").value;
             imgGame();
         }
+
+
+
         function imgGame(){
             let guess2 = guess;
             for (let i = 0; i < mapurl.length; i++) {
                 mapnewlist[i] = mapurl[i].slice(21,-4)
             }
             if (guess2 == mapnewlist[mapimgnum]) {
-                document.getElementById("endgamemessage").innerHTML = "yay you win";
+                document.getElementById("endgamemessage").innerHTML = "Congrats! The guess matches the location.";
             }   else {
-                document.getElementById("endgamemessage").innerHTML = "aww you lose";
+                document.getElementById("endgamemessage").innerHTML = "The guess doesn't match the location.";
             }
+                count += 1;
+                h3.innerHTML = count + " tries";
+                document.getElementById("myText").value = ""
         }
 
     </script>
