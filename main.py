@@ -118,6 +118,9 @@ def map2():
 def gpa():
     return render_template("gpa.html")
 
+@app.route('/maptest/')
+def maptest():
+    return render_template("maptest.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
