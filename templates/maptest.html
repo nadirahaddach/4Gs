@@ -28,7 +28,8 @@
                 <br>
                 <br>
                 <h6 class="border border-primary" id="endgamemessage"></h6>
-                <p id="countDisplay">Counter</p>
+                <p id="countRight">Correct: 0</p>
+                <p id="countWrong">Incorrect: 0</p>
 
             </div>
         </div>
@@ -37,9 +38,11 @@
     <script>
         let mapurl;
         let mapimgnum;
-        let h3 = document.getElementById("countDisplay");
+        let right = document.getElementById("countRight");
+        let wrong = document.getElementById("countWrong");
         let button = document.getElementById("clickme");
-        let count = -1;
+        let countR = 0;
+        let countW = -1;
         let easy = [
             "/static/assets/map/dnbasketball courts.png",
             "/static/assets/map/dngym.png",
@@ -79,7 +82,8 @@
         }
         function getrandomImg() {
             document.getElementById("mapimage").src = mapurl[mapimgnum];
-            count = -1
+            countR = 0
+            countW = -1
         }
         mapnewlist = new Array([]);
 
@@ -100,11 +104,13 @@
             }
             if (guess2 == mapnewlist[mapimgnum]) {
                 document.getElementById("endgamemessage").innerHTML = "Congrats! The guess matches the location.";
+                countR += 1;
+                right.innerHTML = "Correct: " + countR;
             }   else {
                 document.getElementById("endgamemessage").innerHTML = "The guess doesn't match the location.";
+                countW += 1;
+                wrong.innerHTML = "Incorrect: " + countW;
             }
-                count += 1;
-                h3.innerHTML = count + " tries";
                 document.getElementById("myText").value = ""
         }
 
