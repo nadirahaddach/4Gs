@@ -9,239 +9,80 @@
     <div class="center">
     <h2>GPA Calculator</h2>
 
-    <head> <meta charset="utf-8"> <link rel="stylesheet" type="text/css"
-                                        href="styles.css"> <title>Center for Health Information Technology
-    </title>
-        <script type="text/javascript">
-            function calculate()
-            {
-                var x=document.getElementById("result1").innerText;
-                var y=document.getElementById("result2").innerText;
-                var z=document.getElementById("result3").innerText;
-                var a=document.getElementById("result4").innerText;
-                var result1=parseFloat(x) + parseFloat(y) + parseFloat(z)
-                    + parseFloat(a); // conversion to numbers; this is necessary for +, other    operators will automatically convert
-                var result5=x%y;
+    <head> <meta charset="utf-8"> <link rel="stylesheet" type="text/css" href="styles.css">
 
-                //build a string first and then display it all together.
-                //don't forget HTML tags in your output!
-
-                var html="<p>Your GPA is: "+result1/4+"</p>";
-
-
-
-
-                document.getElementById("total").innerHTML=html;
-            }
-
-
-        </script>
     </head>
 
     <body>
 
+    <form action="" id="class1">Enter your grade in the form of a letter grade for your class:<br>
+        <label for="grade1">Input Grade for Period 1</label>
+        <input type="text" id="grade1" value=""> <br>
+        <label for="grade2">Input Grade for Period 2</label>
+        <input type="text" id="grade2" value=""> <br>
+        <label for="grade3">Input Grade for Period 3</label>
+        <input type="text" id="grade3" value=""> <br>
+        <label for="grade4">Input Grade for Period 4</label>
+        <input type="text" id="grade4" value=""> <br>
+        <label for="grade5">Input Grade for Period 5</label>
+        <input type="text" id="grade5" value=""> <br>
+        <input type="button" name="button" value="Calculate GPA" onclick="getGrades()">
+    </form>
+    <p id="gpayy"></p>
 
-
-    <script language="JavaScript">
-
-        function calculateGpa (form) {
-            var gpa = form.gpa1.value;
-
-            if (gpa == "A") {
-                gpa = 4;
-            }
-            if (gpa == "B") {
-                gpa = 3;
-            }
-            if (gpa == "C") {
-                gpa = 2;
-            }
-            if (gpa == "D") {
-                gpa = 1;
-            }
-            if (gpa == "F") {
-                gpa = 0;
-            }
-            if (gpa == "a") {
-                gpa = 4;
-            }
-            if (gpa == "b") {
-                gpa = 3;
-            }
-            if (gpa == "c") {
-                gpa = 2;
-            }
-            if (gpa == "d") {
-                gpa = 1;
-            }
-            if (gpa == "f") {
-                gpa = 0;
-            }
-            document.getElementById("result1").innerHTML = gpa;
+    <script>
+        let grade1;
+        let grade2;
+        let grade3;
+        let grade4;
+        let grade5;
+        let gpaList1 = [];
+        let newgpa;
+        let summ;
+        gpaList2 = new Array([]);
+        function getGrades(){
+            grade1 = document.getElementById("grade1").value;
+            grade2 = document.getElementById("grade2").value;
+            grade3 = document.getElementById("grade3").value;
+            grade4 = document.getElementById("grade4").value;
+            grade5 = document.getElementById("grade5").value;
+            gpaList1 = [
+                grade1.toLowerCase(),
+                grade2.toLowerCase(),
+                grade3.toLowerCase(),
+                grade4.toLowerCase(),
+                grade5.toLowerCase()];
+            toNumbers()
+            calculateGPA()
         }
+        function toNumbers(){
+            for (let i = 0; i < gpaList1.length; i++) {
+                if (gpaList1[i] == "a") {
+                    gpaList2.push(parseFloat(4));
+                }
+                if (gpaList1[i] == "b") {
+                    gpaList2.push(parseFloat(3));
+                }
+                if (gpaList1[i] == "c") {
+                    gpaList2.push(parseFloat(2));
+                }
+                if (gpaList1[i] == "d") {
+                    gpaList2.push(parseFloat(1));
+                }
+                if (gpaList1[i] == "f") {
+                    gpaList2.push(parseFloat(0));
+                }
+            }
+        }
+
+        function calculateGPA(){
+            summ = Number(gpaList2[0]) + Number(gpaList2[1]) + Number(gpaList2[2]) + Number(gpaList2[3]) + Number(gpaList2[4]) + Number(gpaList2[5])
+            newgpa = summ/5
+            document.getElementById("gpayy").innerText = newgpa
+        }
+
     </script>
 
-
-    <body>
-
-    <form action="" id="class1">Enter your grade in the form of a letter grade for class 1:<br>
-
-        <input type="text" name="gpa1" value="">
-        <input type="button" name="button" value="Calculate" onClick="calculateGpa(this.form)">
-    </form>
-    <div id="result1"></div>
-
-
-    <script language="JavaScript">
-
-        function calculateGpa2 (form) {
-            var gpa = form.gpa2.value;
-
-            if (gpa == "A") {
-                gpa = 4;
-            }
-            if (gpa == "B") {
-                gpa = 3;
-            }
-            if (gpa == "C") {
-                gpa = 2;
-            }
-            if (gpa == "D") {
-                gpa = 1;
-            }
-            if (gpa == "F") {
-                gpa = 0;
-            }
-            if (gpa == "a") {
-                gpa = 4;
-            }
-            if (gpa == "b") {
-                gpa = 3;
-            }
-            if (gpa == "c") {
-                gpa = 2;
-            }
-            if (gpa == "d") {
-                gpa = 1;
-            }
-            if (gpa == "f") {
-                gpa = 0;
-            }
-            document.getElementById("result2").innerHTML = gpa;
-        }
-    </script>
-
-
-    <body>
-
-    <form action="" id="class2">Enter your grade in the form of a letter grade for class 2:<br>
-
-        <input type="text" name="gpa2" value="">
-        <input type="button" name="button" value="Calculate" onClick="calculateGpa2(this.form)">
-    </form>
-    <div id="result2"></div>
-
-
-    <script language="JavaScript">
-        function calculateGpa3 (form) {
-            var gpa = form.gpa3.value;
-
-            if (gpa == "A") {
-                gpa = 4;
-            }
-            if (gpa == "B") {
-                gpa = 3;
-            }
-            if (gpa == "C") {
-                gpa = 2;
-            }
-            if (gpa == "D") {
-                gpa = 1;
-            }
-            if (gpa == "F") {
-                gpa = 0;
-            }
-            if (gpa == "a") {
-                gpa = 4;
-            }
-            if (gpa == "b") {
-                gpa = 3;
-            }
-            if (gpa == "c") {
-                gpa = 2;
-            }
-            if (gpa == "d") {
-                gpa = 1;
-            }
-            if (gpa == "f") {
-                gpa = 0;
-            }
-            document.getElementById("result3").innerHTML = gpa;
-        }
-    </script>
-
-
-    <body>
-
-    <form action="" id="class3">Enter your grade in the form of a letter grade for class IT 5443:<br>
-
-        <input type="text" name="gpa3" value="">
-        <input type="button" name="button" value="Calculate" onClick="calculateGpa3(this.form)">
-    </form>
-    <div id="result3"></div>
-
-
-    <script language="JavaScript">
-        function calculateGpa4(form) {
-            var gpa = form.gpa4.value;
-
-            if (gpa == "A") {
-                gpa = 4;
-            }
-            if (gpa == "B") {
-                gpa = 3;
-            }
-            if (gpa == "C") {
-                gpa = 2;
-            }
-            if (gpa == "D") {
-                gpa = 1;
-            }
-            if (gpa == "F") {
-                gpa = 0;
-            }
-            if (gpa == "a") {
-                gpa = 4;
-            }
-            if (gpa == "b") {
-                gpa = 3;
-            }
-            if (gpa == "c") {
-                gpa = 2;
-            }
-            if (gpa == "d") {
-                gpa = 1;
-            }
-            if (gpa == "f") {
-                gpa = 0;
-            }
-            document.getElementById("result4").innerHTML = gpa;
-
-
-        }
-    </script>
-
-
-    <body>
-
-    <form action="" id="class4">Enter your grade in the form of a letter grade for class IT 5413:<br>
-
-        <input type="text" name="gpa4" value="">
-        <input type="button" name="button" value="Calculate" onClick="calculateGpa4(this.form)">
-    </form>
-    <div id="result4"></div>
-    <br>
-    <input type="button" id="final" name="button" value="Calculate" onClick="calculate(result1+result2+result3+result4)">
 
 
     <style>
