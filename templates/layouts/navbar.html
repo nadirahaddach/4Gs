@@ -15,10 +15,18 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <a class="nav-link" href={{ url_for('councelorsearch') }}>Find Your Counselor!</a>
             <a class="nav-link" href={{ url_for('mathpage') }}>Math PATH</a>
             <a class="nav-link" href={{ url_for('clubpage') }}>Club PAGE</a>
-            <a class="nav-link" href={{ url_for('map2') }}>MAP</a>
-            <a class="nav-link" href={{ url_for('comment') }}>Comments</a>
             <a class="nav-link" href={{ url_for('gpa') }}>GPA Calculator</a>
-            <a class="nav-link" href={{ url_for('nadirargb') }}>Nadira Create Task</a>
+            <a class="nav-link" href={{ url_for('nadirargb') }}>Student Art</a>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    MAP
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <a class="nav-link" href={{ url_for('map2') }}>MAP</a>
+                    <a class="nav-link" href={{ url_for('maptest') }}>Map QUIZ</a>
+                </div>
+            </li>
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
