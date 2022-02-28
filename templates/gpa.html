@@ -7,17 +7,81 @@
     <body>
 
     <div class="center">
-        <h2>GPA Calculator</h2>
-        <h5> Fresman year</h5>
-        <p>Tri one - enter letter grade</p>
+    <h2>GPA Calculator</h2>
 
-    num = int(input('How many classes: '))
-    total_sum = 0
-    for n in range(num):
-            numbers = float(input('Enter grade % : '))
-            total_sum = numbers
-    avg = total_sum/num
-    print('Average of ', num, ' numbers is :', avg)
+    <head> <meta charset="utf-8"> <link rel="stylesheet" type="text/css" href="styles.css">
+
+    </head>
+
+    <body>
+
+    <form action="" id="class1">Enter your grade in the form of a letter grade for your class:<br>
+        <label for="grade1">Input Grade for Period 1</label>
+        <input type="text" id="grade1" value=""> <br>
+        <label for="grade2">Input Grade for Period 2</label>
+        <input type="text" id="grade2" value=""> <br>
+        <label for="grade3">Input Grade for Period 3</label>
+        <input type="text" id="grade3" value=""> <br>
+        <label for="grade4">Input Grade for Period 4</label>
+        <input type="text" id="grade4" value=""> <br>
+        <label for="grade5">Input Grade for Period 5</label>
+        <input type="text" id="grade5" value=""> <br>
+        <input type="button" name="button" value="Calculate GPA" onclick="getGrades()">
+    </form>
+    <p id="gpayy"></p>
+
+    <script>
+        let grade1;
+        let grade2;
+        let grade3;
+        let grade4;
+        let grade5;
+        let gpaList1 = [];
+        let newgpa;
+        let summ;
+        gpaList2 = new Array([]);
+        function getGrades(){
+            grade1 = document.getElementById("grade1").value;
+            grade2 = document.getElementById("grade2").value;
+            grade3 = document.getElementById("grade3").value;
+            grade4 = document.getElementById("grade4").value;
+            grade5 = document.getElementById("grade5").value;
+            gpaList1 = [
+                grade1.toLowerCase(),
+                grade2.toLowerCase(),
+                grade3.toLowerCase(),
+                grade4.toLowerCase(),
+                grade5.toLowerCase()];
+            toNumbers()
+            calculateGPA()
+        }
+        function toNumbers(){
+            for (let i = 0; i < gpaList1.length; i++) {
+                if (gpaList1[i] == "a") {
+                    gpaList2.push(parseFloat(4));
+                }
+                if (gpaList1[i] == "b") {
+                    gpaList2.push(parseFloat(3));
+                }
+                if (gpaList1[i] == "c") {
+                    gpaList2.push(parseFloat(2));
+                }
+                if (gpaList1[i] == "d") {
+                    gpaList2.push(parseFloat(1));
+                }
+                if (gpaList1[i] == "f") {
+                    gpaList2.push(parseFloat(0));
+                }
+            }
+        }
+
+        function calculateGPA(){
+            summ = Number(gpaList2[0]) + Number(gpaList2[1]) + Number(gpaList2[2]) + Number(gpaList2[3]) + Number(gpaList2[4]) + Number(gpaList2[5])
+            newgpa = summ/5
+            document.getElementById("gpayy").innerText = newgpa
+        }
+
+    </script>
 
 
 
