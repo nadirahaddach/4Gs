@@ -1,11 +1,11 @@
 # import "packages" from flask
-from flask import render_template, request
-import requests
-from templates.aboutus.briaapi import eightball
-from crud.app_crud_api import app_crud_api
-from crud.app_crud import app_crud
+from flask import Flask, render_template, request
 from __init__ import app
-
+import requests
+from image import image_data
+from crud.app_crud import app_crud
+from pathlib import Path
+from crud.app_crud_api import app_crud_api
 
 # create a Flask instance
 app.register_blueprint(app_crud_api)
@@ -117,6 +117,11 @@ def map2():
 @app.route('/gpa/')
 def gpa():
     return render_template("gpa.html")
+
+@app.route('/nadirargb/', methods=["GET", "POST"])
+def nadirargb():
+    path = Path(app.root_path) / "static" / "assets"
+    return render_template('nadirargb.html', images=image_data(path))
 
 
 # runs the application on the development server
