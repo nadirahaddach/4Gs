@@ -2,8 +2,8 @@
 from flask import render_template, request
 import requests
 from templates.aboutus.briaapi import eightball
-from crud.app_crud_api import app_crud_api
-from crud.app_crud import app_crud
+from crudy.app_crud_api import app_crud_api
+from crudy.app_crud import app_crud
 from __init__ import app
 
 
@@ -104,6 +104,11 @@ def councelorsearch():
         if len("input") != 0:
             return render_template("councelorsearch.html", input=input)
     return render_template("councelorsearch.html")
+
+@app.route('/Stress Quiz/')
+def Stress_Quiz():
+    return render_template("Stress Quiz.html")
+
 
 
 @app.route('/clubpage/')
