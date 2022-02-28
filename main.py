@@ -118,6 +118,10 @@ def map2():
 def gpa():
     return render_template("gpa.html")
 
+@app.route('/maptest/')
+def maptest():
+    return render_template("maptest.html")
+
 @app.route('/nadirargb/', methods=["GET", "POST"])
 def nadirargb():
     path = Path(app.root_path) / "static" / "assets"

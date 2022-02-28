@@ -87,15 +87,11 @@
         }
         mapnewlist = new Array([]);
 
-
-
         let guess;
         function getGuess(){
             guess = document.getElementById("myText").value;
             imgGame();
         }
-
-
 
         function imgGame(){
             let guess2 = guess;
@@ -111,7 +107,8 @@
                 countW += 1;
                 wrong.innerHTML = "Incorrect: " + countW;
             }
-                document.getElementById("myText").value = ""
+            right.innerHTMl = "Correct: " + countR;
+            document.getElementById("myText").value = ""
         }
 
     </script>
