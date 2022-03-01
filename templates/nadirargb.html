@@ -1,25 +1,11 @@
 {% extends "layouts/base.html" %}
 
-{% block meta %}
-    <script>
-        function changeImage() {
-            if (document.getElementById("img1").src == document.getElementById('img_orig1').innerHTML) {
-                document.getElementById('img1').src = document.getElementById('img_gray1').innerHTML;
-            }
-            else {
-                document.getElementById('img1').src = document.getElementById('img_orig1').innerHTML;
-            }
-        }
-        // Hack: add java script function to toggle image from original to gray and back (toggle)
-        //  document.getElementById("img<n>").src
-        //  document.getElementID("img_gray<n>").innerHTML
-        //  help: https://www.geeksforgeeks.org/how-to-change-the-src-attribute-of-an-img-element-in-javascript-jquery/
-    </script>
-    <title>RGB starter</title>
-{% endblock %}
 
 {% block body %}
-    <h1 class="text-center">RGB values within an Image</h1>
+
+    <title>RGB starter</title>
+
+    <h1 class="text-center">Student Art</h1>
     <div class="container">
         <div class="row justify-content-md-center">
             <table class="table">
@@ -41,15 +27,41 @@
                             <div>{{image.source}}</div>
                         </td>
                         <td>
-                            <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
-                            <!-- Hack: create button (btn{{loop.index}} to  call java script function
-                               pass index to allow you to toggle images with hidden id's
-                               {image.base64}}  original image
-                               {image.base64_GRAY}}  gray scale image
-                            -->
-                            <div>
-                                <button type="button" id=myImage onclick="changeImage()">Color/Greyscale</button>
-                            </div>
+                            <img class="img-responsive py-3" id="img{{loop.index}}" alt="" width="256" height="Auto" src="{{image.base64}}" >
+
+                            <script>
+                                let imgStatus = 'color';
+                                function gsToggle() {
+                                    if (imgStatus == 'color') {
+                                        var imgType = document.getElementById("img{{loop.index}}");
+                                        imgType.src = "{{image.base64_GRAY}}";
+                                        imgStatus = 'gray';
+                                    }
+                                    else{
+                                        var imgType = document.getElementById("img{{loop.index}}");
+                                        imgType.src = "{{image.base64}}";
+                                        imgStatus = 'color';
+                                    }
+                                }
+
+                                function gsFlip() {
+                                    if (imgStatus == 'colored') {
+                                        var imgType = document.getElementById("img{{loop.index}}");
+                                        imgType.src = "{{image.base64_flipR}}";
+                                        imgStatus = 'flipR';
+                                    }
+                                    else{
+                                        var imgType = document.getElementById("img{{loop.index}}");
+                                        imgType.src = "{{image.base64}}";
+                                        imgStatus = 'colored';
+                                    }
+                                }
+
+
+                            </script>
+
+                            <button type="button" onclick="gsToggle()"> Grayscale </button>
+                            <button type="button" onclick="gsFlip()"> Flip </button>
 
                             <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
                             <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
@@ -88,4 +100,9 @@
 
         </div>
     </div>
+    <style>
+        div {
+            color: white;
+        }
+    </style>
 {% endblock %}
