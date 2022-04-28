@@ -6,28 +6,45 @@
 <!-- CONTENT (in <head>), content for this page -->
 {% block body %}
     <body>
+
     <div class="container">
+        <!-- Formatting for the map image -->
         <div class="row justify-content-md-center">
             <div class="col-md-auto bg-secondary text-white p-3">
-                <img src="/static/assets/map/dndefault.png" alt="Map image" id="mapimage" style="width: 688px; height: auto"/>
+                <!-- Image that changes based on user selection -->
+                <img src="/static/assets/map/dndefault.png" alt="Map image" id="mapImage" style="width: 688px; height: auto"/>
             </div>
 
+            <!-- Formatting and style for title and description -->
             <div class="col col-lg-4 p-3 ">
                 <div class="alert alert-primary" role="alert">
                     <h5>Del Norte GeoGuesser:</h5> <p>This game is designed to help new students learn the locations of Del Norte in a fun and easy to use manner! </p>
                 </div>
+                <!-- Selection of the game difficulty that calls to the changeDifficulty function with different parameters -->
                 <div class="btn-group btn-block pb-3 pt-2" role="group" aria-label="Choosing Difficulty">
                     <button type="button" class="btn btn-secondary" id="easy" onclick="changeDifficulty(1)">Easy</button>
                     <button type="button" class="btn btn-secondary" id="medium" onclick="changeDifficulty(2)">Medium</button>
                     <button type="button" class="btn btn-secondary" id="hard" onclick="changeDifficulty(3)">Hard</button>
                 </div>
 
-                <label for="myText">Guess the Location:</label><br>
-                <input type="text" id="myText" placeholder="Type Here..." value="">
-                <button id="clickme" onclick="getGuess()">Submit Answer</button>
+                <!-- Display the time remaining in the game -->
+                <p id="timeRemaining"></p>
+
+                <!-- Defining the section of the code that will change to display the game over message -->
+                <div id="gameover">
+
+                <!-- Input for user to give their guesses for the location -->
+                <label for="inputAnswer">Guess the Location:</label><br>
+                <input type="text" id="inputAnswer" placeholder="Type Here..." value="">
+                <!-- Submit button that calls the function -->
+                <button id="submitAnswer" onclick="getGuess()">Submit Answer</button>
                 <br>
                 <br>
+                <!-- Display the result of the program -->
                 <h6 class="border border-primary" id="endgamemessage"></h6>
+                </div>
+
+                <!-- Counter updates with the amount scored right and wrong -->
                 <p id="countRight">Correct: 0</p>
                 <p id="countWrong">Incorrect: 0</p>
 
@@ -36,13 +53,21 @@
     </div>
     </body>
     <script>
-        let mapurl;
-        let mapimgnum;
+
+        // Defining variables used throughout the program
+        let mapUrl;
+        let mapNumber;
+        let timeLeft;
+        let elem = document.getElementById('timeRemaining');
+        var timerId = setInterval(countdown, 1000);
         let right = document.getElementById("countRight");
         let wrong = document.getElementById("countWrong");
-        let button = document.getElementById("clickme");
+        let button = document.getElementById("submitAnswer");
         let countR = 0;
         let countW = -1;
+
+        // Defining the list that stores the urls of images to be selected from
+        // Has different images based on the difficulty selected by the user
         let easy = [
             "/static/assets/map/dnbasketball courts.png",
             "/static/assets/map/dngym.png",
@@ -65,50 +90,97 @@
             "/static/assets/map/dnk building.png",
             "/static/assets/map/dnl building.png",
             "/static/assets/map/dnp building.png"];
+
+        // Depending on the user's selection, there will be a different integer parameter defining the function
         function changeDifficulty(difficulty){
+            // Setting the user input equal to the variable number
             let number = difficulty
-            if (number === 0) {
-                mapurl = easy
-            } else if (number === 1) {
-                mapurl = easy
+
+            // Use of conditionals to determine which difficulty the user chose
+            // Setting the variable mapUrl equal to the array that corresponding with each difficulty defined above
+            // Setting the variable timeLeft equal to the amount of seconds that the user has to guess (50 seconds for easy, 40 seconds for medium, 20 seconds for hard)
+            if (number === 1) {
+                mapUrl = easy
+                timeLeft = 50
+
             } else if (number === 2) {
-                mapurl = medium
+                mapUrl = medium
+                timeLeft = 40
+
             } else if (number === 3){
-                mapurl = hard
+                mapUrl = hard
+                timeLeft = 20
             }
-            mapimgnum = Math.floor(Math.random() * mapurl.length);
+            // Resetting the number of correct and incorrect guesses to zero
+            right.innerHTML = "Correct: " + 0;
+            wrong.innerHTML = "Incorrect: " + 0;
+            // Selecting a random number from 0 to the length of the chosen map array and setting that equal to the variable mapNumber
+            mapNumber = Math.floor(Math.random() * mapUrl.length);
+
             getrandomImg();
             getGuess();
         }
-        function getrandomImg() {
-            document.getElementById("mapimage").src = mapurl[mapimgnum];
-            countR = 0
-            countW = -1
-        }
-        mapnewlist = new Array([]);
 
+        // Changing the image src from the HTML to be the element with the index of random number from the chosen array
+        function getrandomImg() {
+            document.getElementById("mapImage").src = mapUrl[mapNumber];
+            // Setting the count for right and wrong equal to zero
+            countR = 0
+            countW = 0
+        }
+
+        // Defining a new array
+        mapNewlist = [];
+        // Defining variable guess
         let guess;
+
+        // Gathering the guess from the user and calling the function imgGame
         function getGuess(){
-            guess = document.getElementById("myText").value;
+            guess = document.getElementById("inputAnswer").value;
             imgGame();
         }
 
+        // Setting the guess equal to the variable guess2
         function imgGame(){
             let guess2 = guess;
-            for (let i = 0; i < mapurl.length; i++) {
-                mapnewlist[i] = mapurl[i].slice(21,-4)
+            // Iterating through mapUrl array and removing the image location information (including the beginning "/static/assets/map/dn" and the ending ".png") and storing the result as a new array called mapNewlist
+            for (let i = 0; i < mapUrl.length; i++) {
+                mapNewlist[i] = mapUrl[i].slice(21,-4)
             }
-            if (guess2 == mapnewlist[mapimgnum]) {
+            // Conditional determines whether or not the guess is equal to the name of the location
+            // If correct, the winning text is displayed and 1 is added to the correct guesses counter
+            if (guess2 == mapNewlist[mapNumber]) {
                 document.getElementById("endgamemessage").innerHTML = "Congrats! The guess matches the location.";
                 countR += 1;
                 right.innerHTML = "Correct: " + countR;
-            }   else {
+            }
+            // If the input is blank, no game text is displayed
+            else if (guess2 == "") {
+                document.getElementById("endgamemessage").innerHTML = null;
+            }
+            // If the input is incorrect, the losing text is displayed and 1 is added to the incorrect guesses counter
+            else {
                 document.getElementById("endgamemessage").innerHTML = "The guess doesn't match the location.";
                 countW += 1;
                 wrong.innerHTML = "Incorrect: " + countW;
             }
-            right.innerHTMl = "Correct: " + countR;
-            document.getElementById("myText").value = ""
+            // Setting the input back to zero to reset the game
+            document.getElementById("inputAnswer").value = ""
+        }
+        // Timer counts down using conditional and replaces the div element with game over text once the timer is done
+        function countdown() {
+            if (timeLeft == -1) {
+                clearTimeout(timerId);
+                document.getElementById("gameover").innerText = "Game Over!"
+            }
+
+            else if (timeLeft == null){
+                elem.innerHTML = ' ';
+            }
+            else {
+                elem.innerHTML = timeLeft + ' seconds remaining';
+                timeLeft--;
+            }
         }
 
     </script>

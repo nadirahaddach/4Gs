@@ -83,7 +83,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                         // loop through JSON and build HTML output
                         for (let i = 0; i < data.length; i++) {
                             const div = document.createElement("div");
-                            div.innerHTML = data[i].name + ' ' + data[i].email;
+                            div.innerHTML = data[i].name + ' ' + data[i].email + ' <br><br>';
                             resultContainer.appendChild(div);
                         }
                     })
